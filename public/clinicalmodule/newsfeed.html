@@ -1,0 +1,22 @@
+<ion-view title="News Feed" id="page2">
+<ion-content padding="true" class="has-header">
+      <div class="bar bar-header item-input-inset">
+<label class="item-input-wrapper">
+<i class="icon ion-ios-search placeholder-icon"></i>
+<input type="search" id="searchbar" ng-model="medicationssearchfilter" placeholder="Search medications list">
+</label>
+</div>
+  <div class="list card" ng-app="starter">
+
+  <div class="item" ng-repeat="newsfeed in newsfeeds|filter:medicationssearchfilter" ng-click="showURLDetails(newsfeed)">
+
+  <h2>{{newsfeed.title}}</h2>
+  <p>{{newsfeed.contentSnippet}}</p>
+  <p>Published on: {{newsfeed.pubDate}}</p>
+
+</div>
+
+
+</div>
+    </ion-content>
+</ion-view>

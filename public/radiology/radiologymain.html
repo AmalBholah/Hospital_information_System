@@ -1,0 +1,117 @@
+<ion-view title="Radiology Services">
+    <ion-content>
+
+
+<div class="row">
+<div class="col-60">
+
+
+
+      <div data-barcode-scanner="barcodeScanned"></div>
+      <form style="padding-left:10px;">
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Radiologist: </span>
+        <button ng-click="identifystockperson()" id="mainmenu.identifystockperson" ng-model="mainmenu.identifystockperson" style="width:300px" class="button button-royal"  title="Use barcode scanner" uk-tooltip>Click here to identify yourself</button>
+        </label>
+       <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Select Active Patient: </span>
+        <button ng-click="loadpatientprofile()" id="mainmenu.loadpatient" ng-model="mainmenu.loadpatient" style="width:300px"  title="Clocked in patients" uk-tooltip class="button button-positive">Click here to load a Patient</button>
+        </label>
+
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Date of issue: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.dateofissue" id="mainmenu.dateofissue" placeholder="Specify today's date" >
+        </label>
+
+<div class="spacer" style="width: 300px; height: 25px;"></div>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Patient Name: </span>
+          <input type="text" style="font-size:18px;" readonly="readonly" ng-model="mainmenu.patientname" placeholder="Patient's Name" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Gender: </span>
+          <input type="text" style="font-size:18px;" readonly="readonly" ng-model="mainmenu.patientgender" placeholder="Gender" >
+        </label>
+
+ </form>
+ <div>
+        <div class="row header">
+          <div class="col">Test Name</div>
+          <div class="col">Price (Rs)</div>
+          <div class="col">Category</div>
+          <div class="col"></div>
+        </div>
+        <div class="row" ng-repeat="blobitem in blobitems">
+          <div class="col">{{blobitem.servicetype}}</div>
+          <div class="col">{{blobitem.servicecost}}</div>
+          <div class="col">{{blobitem.servicecategory}}</div>
+          <div class="col">
+            <button class="button button-stable" ng-click="deleteblob(blobitem)"  title="Delete this entry" uk-tooltip>Delete</button>
+            </div>
+        </div>
+ </div>
+
+
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+
+<div class="button-bar">
+   <button ng-click="submitradiologytests()" class="button button-positive"  title="Save Entries" uk-tooltip>Bill Radiology Services</button>
+   <button class="button button-balanced" type="button" style="width: 300px;" ng-click="viewradiologytests()">View Radiology Tests</button>
+   <button class="button button-dark" type="button" style="width: 300px;"  href="#modal" uk-toggle ng-click="patientdetails()">Patient Details</button>
+</div>
+
+</div>
+
+<div class="col-40">
+
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar">
+                <span uk-search-icon></span>
+                <input class="uk-search-input" type="search" ng-model="searchfilter" placeholder="Search radiology tests">
+            </form>
+        </div>
+
+    </div>
+</nav>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="radiologytest in radiologytests|filter:searchfilter| limitTo:100" ng-click="selectedradiologytest(radiologytest)">
+
+  <h2>{{radiologytest.servicetype}}</h2>
+  <p>Cost: {{radiologytest.servicecost}}</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Clocked-in patient details</h2>
+        <p>Family Name: {{patient.lastname}}</p>
+        <p>Given Name: {{patient.firstname}}</p>
+        <p>WARD OCCUPIED: {{patient.facilityoccupied}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Date of Birth: {{patient.dateofbirthday}} {{patient.dateofbirthmonth}} {{patient.dateofbirthyear}}</p>
+        <p>Address: {{patient.address}}</p>
+        <p>National ID: {{patient.nic}}</p>
+        <p>Phone Number: {{patient.phonenumber}}</p>
+        <p>Email: {{patient.email}}</p>
+        <p>Referred by Doctor: {{patient.referringdoctor}}</p>
+        <p>Payment Method: {{patient.paymentmethod}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Notes: {{patient.notes}}</p>
+
+    </div>
+
+
+</div>
+
+</ion-content></ion-view>

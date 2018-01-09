@@ -1,0 +1,57 @@
+<ion-view title="List of Inpatients">
+<ion-content padding="true" class="has-header">
+ 
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtomenu()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search list of inpatients">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="viewpatient in viewpatients|filter:searchfilter| limitTo:100" ng-click="showDetailsWard(viewpatient)">
+
+<div class="row">
+  <div class="col-60">
+  <h2>{{viewpatient.lastname +" "+ viewpatient.firstname}}</h2>
+  <p>{{viewpatient.gender}}</p>
+  <p>{{viewpatient.address}}</p>
+  <p>Date of Birth: {{viewpatient.dateofbirthday}} {{viewpatient.dateofbirthmonth}} {{viewpatient.dateofbirthyear}}</p>
+  </div>
+
+  <div class="col-40">
+     <div class="spacer" style="width: 300px; height: 50px;"></div>
+    <button class="uk-button uk-button-primary" style="width: 250px;" href="#modal" uk-toggle  title="Patient details" uk-tooltip>Patient Details</button>
+     <div class="spacer" style="width: 300px; height: 10px;"></div>
+    <button class="uk-button uk-button-danger" style="width: 250px;" ng-click="transferpatient(viewpatient)" type="submit" title="Transfer patient to another ward" uk-tooltip>Transfer Patient</button>
+</div>
+
+</div>
+
+</div>
+</div>
+<div id="modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Clocked-in patient details</h2>
+        <p>Family Name: {{patient.lastname}}</p>
+        <p>Given Name: {{patient.firstname}}</p>
+        <p>WARD OCCUPIED: {{patient.facilityoccupied}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Date of Birth: {{patient.dateofbirthday}} {{patient.dateofbirthmonth}} {{patient.dateofbirthyear}}</p>
+        <p>Address: {{patient.address}}</p>
+        <p>Phone Number: {{patient.phonenumber}}</p>
+        <p>Email: {{patient.email}}</p>
+        <p>Referred by Doctor: {{patient.referringdoctor}}</p>
+        <p>Payment Method: {{patient.paymentmethod}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Notes: {{patient.notes}}</p>
+
+    </div>
+
+
+</div>
+
+    </ion-content>
+</ion-view>

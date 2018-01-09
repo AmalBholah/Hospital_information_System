@@ -1,0 +1,22 @@
+<ion-view title="Ward Manager">
+<ion-content padding="true" class="has-header">
+ 
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtomenu()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search list of wards">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="peripheral in peripherals|filter:searchfilter| limitTo:100" ng-click="peripheralclicked(peripheral)">
+
+  <h2>Facility: {{peripheral.facility}}</h2>
+  <p>Category: {{peripheral.category}}</p>
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>

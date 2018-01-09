@@ -1,0 +1,51 @@
+<ion-view title="Facility Manager">
+<ion-content padding="true" class="has-header">
+
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleback()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="searchfilter" placeholder="Search facility list">
+    </label>
+    <a class="button button-small button-positive" ng-click="createfacility()">
+      Create a facility
+    </a>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="object in objects|filter:searchfilter|limitTo:100" ng-click="facilityclicked(object)">
+<div class="row">
+  <div class="col">
+  <div class="spacer" style="width: 300px; height: 10px;"></div>
+
+ <dt>Facility : {{object.facility}}</dt>
+  <dd>Category : {{object.category}}</dd>
+
+  </div>
+
+
+<div class="col"> 
+<button class="uk-button uk-button-primary" style="width:120px;"ng-click="editfacility(object)" type="submit"title="Edit facility name, bed occupancy & bed count" uk-tooltip>Edit</button>
+<button class="uk-button uk-button-secondary" style="width:120px;" href="#modal-sections" uk-toggle type="submit"title="Delete this facility forever" ng-click = "bufferitem(object)"uk-tooltip>Remove</button>
+</div> 
+
+</div>
+</div>
+
+<div id="modal-sections" uk-modal="center: true">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Facility Manager</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>WARNING: Deleting a facility will remove it from the listing forever. Changes cannot be undone and all patients admitted in that facility will be lost. If you are deleting a ward, make sure the patients in that ward are transferred elsewhere or discharged.</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary uk-modal-close" ng-click="removefacility()" type="button">Remove facility</button>
+        </div>
+    </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view title="Facility Manager">
+<ion-content padding="true" class="has-header">
+
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleback()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="searchfilter" placeholder="Search services">
+    </label>
+    <a class="button button-small button-positive" ng-click="createservice()">
+      Create a Service
+    </a>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="object in objects|filter:searchfilter|limitTo:200" ng-click="serviceclicked(object)">
+<div class="row">
+  <div class="col">
+  <div class="spacer" style="width: 300px; height: 10px;"></div>
+  <dt>Service : {{object.servicetype}}</dt>
+  <dd>Price : {{object.servicecost}}</dd>
+  <dd>Category : {{object.servicecategory}}</dd>
+  </div>
+  
+<div class="col"> 
+<button class="uk-button uk-button-primary" style="width:120px;"ng-click="editservice(object)" type="submit"title="Edit Service " uk-tooltip>Edit</button>
+<button class="uk-button uk-button-secondary" style="width:120px;" href="#modal-sections" uk-toggle type="submit"title="Delete Service" ng-click = "deleteservice(object)"uk-tooltip>Remove</button>
+</div> 
+
+</div>
+</div>
+
+<div id="modal-sections" uk-modal="center: true">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Services Management</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>WARNING: Deleting this Service is irreversible. Do you want to continue?</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary uk-modal-close" ng-click="removeservice()" type="button">Remove Service</button>
+        </div>
+    </div>
+
+    </ion-content>
+</ion-view>

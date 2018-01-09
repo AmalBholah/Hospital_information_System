@@ -1,0 +1,29 @@
+<ion-content>
+
+<!--BEGIN PATIENT orthoexam TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+</button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:60px;" class="input-label">NOTE</span>
+</label>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="note.title" ng-model="note.title" placeholder="Note title" ></label>
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+
+<label class="item item-input item-stacked-label" style="border: none;">
+<textarea id="note.content" ng-model="note.content" placeholder="Note content" style="font-size:18px;padding-top:4px;height:5000px;width:5000px;" rows="50" cols="50">
+</textarea>
+</label>
+
+<!--List encompasses all items-->
+</div><!--END of list div-->
+
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-view title="Smarthealth HIS Login">
+    <ion-content class="has-header">
+
+
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover" style="background-image: url('/img/smarthealth.jpg');" uk-height-viewport></div>
+            <div class="uk-padding-large">
+                <p class="uk-text-lead" style="margin-left: 80px;">SMART HEALTH HIS</p>
+
+                <div class="span" style="height: 10px;"></div>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <input class="uk-input" type="text" ng-model="login.username"  ng-keypress="myFunct($event)" placeholder="Username">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                        <input class="uk-input" type="text" ng-model="login.password"  ng-keypress="myFunct($event)" placeholder="Password">
+                    </div>
+                </div>
+                <div class="span" style="height: 20px;"></div>
+                <button class="uk-button uk-button-default" style="width: 400px;" ng-click="dologin(login)">LOGIN</button>
+                <div class="span" style="height: 20px;"></div>
+                <button class="uk-button uk-button-link" ng-click="gotowebsite()"  style="width: 400px;">OUR WEBSITE</button>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+

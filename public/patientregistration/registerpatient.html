@@ -1,0 +1,190 @@
+<ion-view title="Patient Registration" >
+        <ion-nav-buttons side="right" ng-show="false">
+        <button class="button button-icon button-clear ion-android-exit" title="Options" uk-tooltip uk-toggle="target: #offcanvas-flip">
+        </button>
+      </ion-nav-buttons>
+
+<ion-content>
+
+<div data-barcode-scanner="barcodeScanned"></div>
+
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Last Name: </span>
+          <input type="text" style="font-size:18px;" ng-model="registerpatient.lastname" id="registerpatient.lastname" placeholder="Enter last name" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">First Name: </span>
+          <input type="text" style="font-size:18px;" ng-model="registerpatient.firstname" id="registerpatient.firstname" placeholder="Enter first name" >
+        </label>
+
+          <label class="item item-input">
+              <span style="color:#387ef5;font-size:18px;" class="input-label">MRN: </span>
+              <input type="text" style="font-size:18px;" readonly="readonly" ng-model="registerpatient.mrn" placeholder="Auto generated" >
+          </label>
+
+     <div class="uk-margin">
+       <div class="row">
+       <div class="col-10">
+        <span style="color:#387ef5;font-size:18px;" class="input-label">Gender: </span></div>
+
+<div class="col-90">
+        <div class="uk-form-controls">
+            <label><input class="uk-radio" type="radio"  id="radiomale" ng-click="male_checked()"  name="male"> MALE</label>
+            <div class="spacer" style="width: 300px; height: 10px;"></div>
+            <label><input class="uk-radio" type="radio"  id="radiofemale" ng-click="female_checked()" name="female"> FEMALE</label>
+        </div></div>
+
+       </div>
+     </div>
+        
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Date of Birth: </span>
+      
+       <div class="uk-margin">
+        <select id="day" class="uk-select" ng-model="registerpatient.day" ng-change="daychange()" class="form-control selectWidth" >
+        
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+  </div>
+      
+  <div class="uk-margin">
+        <select id="month" class="uk-select" ng-model="registerpatient.month" ng-change="monthchange()" class="form-control selectWidth">
+          <option value="JANUARY">JANUARY</option>
+          <option value="FEBRUARY">FEBRUARY</option>
+          <option value="MARCH">MARCH</option>
+          <option value="APRIL">APRIL</option>
+          <option value="MAY">MAY</option>
+          <option value="JUNE">JUNE</option>
+          <option value="JULY">JULY</option>
+          <option value="AUGUST">AUGUST</option>
+          <option value="SEPTEMBER">SEPTEMBER</option>
+          <option value="OCTOBER">OCTOBER</option>
+          <option value="NOVEMBER">NOVEMBER</option>
+          <option value="DECEMBER">DECEMBER</option>
+        </select>
+ </div>
+  <div class="uk-margin">
+        <select id="year" class="uk-select" ng-model="registerpatient.year" ng-options="x for x in years" ng-change="yearchange()" class="form-control selectWidth">
+        </select>
+  </div>
+
+<div class="uk-alert-primary" uk-alert style=" margin-left: 20px;">
+    <p>{{registerpatient.calculateage}}</p>
+</div>
+
+</label>
+       
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Address: </span>
+          <input type="text" style="font-size:18px;" ng-model="registerpatient.address" id="registerpatient.address" placeholder="Enter full address" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Phone Number: </span>
+          <input type="text" style="font-size:18px;" ng-model="registerpatient.phonenumber" id="registerpatient.phonenumber" placeholder="Enter phone number" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">National ID: </span>
+          <input type="text" style="font-size:18px;" ng-model="registerpatient.nic" id="registerpatient.nic" placeholder="Enter National ID" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Email: </span>
+          <input type="text" style="font-size:18px;" ng-model="registerpatient.email" id="registerpatient.email" placeholder="Enter email" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Referred by Doctor: </span>
+        <button class="uk-button uk-button-primary uk-button-small" ng-model="registerpatient.referringdoctor" id="registerpatient.referringdoctor" type="button" title="Select a doctor from known database" uk-tooltip ng-click="choosedoctor()">{{registerpatient.referringdoctor}}</button>
+          </label>
+        <label class="item item-input"> 
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Payment Method: </span>
+            
+         <div class="uk-margin">
+          <select id="paymentmethod" style="width:225px;" class="uk-select" ng-model="registerpatient.paymentmethod" ng-change="paymentmethodchange()" class="form-control selectWidth">
+          <option value="CASH">CASH</option>
+          <option value="CHEQUE">CHEQUE</option>
+          <option value="CREDIT CARD">CREDIT CARD</option>
+          <option value="DEBIT CARD">DEBIT CARD</option>
+          <option value="INSURANCE">INSURANCE</option>
+        </select>
+        </div>
+
+<div class="uk-alert-primary" uk-alert style=" margin-left: 20px;">
+    <p>{{registerpatient.bankaccount}}</p>
+</div>
+        
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Notes: </span>
+          <textarea ng-model="registerpatient.notes" style="font-size:18px;height:150px;" id="registerpatient.notes" placeholder="Admission Notes">
+          </textarea>
+        </label>
+<div class="spacer" style="width: 300px; height: 0px;"></div>
+
+<div class="uk-offcanvas-content">
+
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3>Patient Registration Options</h3>
+
+            <p>Please make sure you filled in the registration form correctly before proceeding.</p>
+
+          <a class="button button-dark" type="button"  uk-toggle="target: #offcanvas-flip" style="width:300px;"ng-click="registerpatient()">Register Manually</a>
+          <div class="spacer" style="width: 600px; height:20px;"></div>
+
+          <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="registerpatientnfc()">Register with Card</button>
+          <div class="spacer" style="width: 600px; height:20px;"></div>
+
+
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="usecard()">Search using card</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="manualsearch()">Manual search</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="emergency()">Emergency</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="clockpatientin()">Clock Patient In</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="viewclockedinpatients()">View clocked in patients</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-positive" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="pastclockedinpatients()">Past clocked in patients</button>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+</ion-content></ion-view>

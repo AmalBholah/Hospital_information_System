@@ -1,0 +1,105 @@
+<ion-content>
+
+<!--BEGIN PATIENT vitals TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:100px;" class="input-label">VITALS</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Blood pressure</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="vitals.bloodpressure" ng-model="vitals.bloodpressure" placeholder="Blood pressure" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Pulse</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="vitals.pulse"  ng-model="vitals.pulse" placeholder="Pulse" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Temperature</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="vitals.temperature"  ng-model="vitals.temperature" placeholder="Temperature" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Respiratory rate</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="vitals.respiratoryrate"  ng-model="vitals.respiratoryrate" placeholder="Respiratory rate" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">SP O2</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="vitals.spotwo"  ng-model="vitals.spotwo" placeholder="SP O2" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:35px;" class="input-label">GENERAL EXAMINATION</span>
+</label>
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Pallor</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="vitals.pallorcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="vitals.pallortext"  ng-model="vitals.pallortext" placeholder="Pallor" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Cyanosis</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="vitals.cyanosischeck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="vitals.cyanosistext"  ng-model="vitals.cyanosistext" placeholder="Cyanosis" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Jaundice</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="vitals.jaundicecheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="vitals.jaundicetext" ng-model="vitals.jaundicetext" placeholder="Jaundice" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Clubbing</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="vitals.clubbingcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="vitals.clubbingtext"  ng-model="vitals.clubbingtext" placeholder="Clubbing" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:60px;" class="input-label">OTHER FINDINGS</span>
+</label>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="vitals.othervitalfindings"  ng-model="vitals.othervitalfindings" placeholder="Other findings" ></label>
+<!--List encompasses all items-->
+
+</div><!--END of list div-->
+</ion-content>

@@ -1,0 +1,45 @@
+<div class="spacer" style="width: 300px; height: 100px;"></div>
+<ion-content ng-app="starter">
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="gototools()" style="border:none;font-size:18px;color:#387ef5;">< Back to menu</button>
+</div>
+<!-- END of Navigator definitions-->
+<div class="spacer" style="width: 300px; height: 80px;"></div>
+    <label class="item item-input item-select">
+    <div class="input-label"style="font-size:18px;">
+      Weight:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="bicarbonate.weight" style="font-size:18px;padding-left:100px;" ng-model="bicarbonate.weight" placeholder="Enter body weight"></label>
+      <select id = "bicarbonate.selector">
+      <option selected>kg</option>
+      <option>lb</option>
+      <option>g</option>
+    </select>
+  </label>
+  
+      <label class="item item-input">
+    <div class="input-label"style="font-size:18px;">
+      Bicarbonate:
+    </div>
+    <label><input type="text" style="font-size:18px;width:300px;" id ="bicarbonate.level" ng-model="bicarbonate.level" placeholder="Enter bicarbonate level"> </label>
+      <div class="input-label"style="font-size:18px;padding-left:20px;">
+      mEq/L
+    </div>
+  </label>
+       
+  <div class="spacer" style="width: 300px; height:40px;"></div>
+          <div class="row">
+        <div class="col col-50"></div>
+        <div class="col col-50"><button id="bicarbonate.calculate" ng-click="calculatebicarbonate()" type="submit" style="font-size:18px;" class="button button-positive">Calculate</button></div>
+        </div>
+        
+<div class="spacer" style="width: 300px; height:20px;"></div>  
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" id="bicarbonate.results" class="input-label"></span>
+</label>
+<div class="spacer" style="width: 300px; height:20px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">Type in all fields and tap calculate</span>
+</label>
+

@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="bar bar-header">
+    <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtoconsultations()" style="color:#387ef5;">Back to consultations</a>
+<a class="button icon-right button-clear button-dark" ng-click="refreshContents()" style="color:#FF8800;">Refresh contents</a>
+</div>
+   <div class="spacer" style="width: 748px; height:50px;"></div>
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-right:auto;padding-left:5px;" class="input-label">CONSULTATION TITLE</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:20px;width:100%;" id="saveconsultation.consultationtitle" placeholder="Consultation title" >
+      <div class="spacer" style="width: 748px; height:20px;"></div>
+<button ng-click="adddiagnosis()" style="font-size:18px;padding-left:15px;" id="saveconsultation.adddiagnosis" class="button button-clear button-positive">ADD DIAGNOSIS</button>
+
+
+<ul id='tags-diagnosis'></ul>
+
+      <div class="spacer" style="width: 748px; height:20px;"></div>
+
+<button ng-click="adddrugtreatment()" style="font-size:18px;padding-left:15px;" id="saveconsultation.adddrug" class="button button-clear button-positive">ADD DRUG TREATMENT</button>
+
+ <ul id='tags-treatment'></ul>
+
+
+
+  <div class="spacer" style="width: 748px; height:20px;"></div>
+  <span style="color:#387ef5;font-size:18px;margin-right:auto;padding-left:15px;" class="input-label">OTHER TREATMENT</span>
+  <input type="text" style="font-size:18px;height:41px;padding-left:15px;width:100%;" id="saveconsultation.othertreatment" placeholder="Other treatment" >
+  <div class="spacer" style="width: 748px; height:20px;"></div>
+
+  <ion-list>
+    <ion-radio ng-model="saveconsultation.choice" ng-click="radioclicked()" ng-value="'Provisional Diagnosis'">Provisional Diagnosis</ion-radio>
+    <ion-radio ng-model="saveconsultation.choice" ng-click="radioclicked()" ng-value="'Final Diagnosis'">Final Diagnosis</ion-radio>
+  </ion-list>
+  <!--<center><button style="font-size:18px;" ng-click="toggle = !toggle" id="saveconsultation.provdiagnosis" class="button button-clear button-positive">{{toggleText}}</button></center>
+-->
+
+  <center><button ng-click="saveconsultation()" style="font-size:18px;padding-left:20px;" id="saveconsultation.saveconsultation" class="button button-clear button-positive">Save consultation</button></center>
+</ion-content>

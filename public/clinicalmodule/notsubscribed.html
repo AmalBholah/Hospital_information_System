@@ -1,0 +1,33 @@
+<ion-view title="Smart Health" id="doctorlogin" style="background-color:#FFFCFC;">
+    <ion-content padding="true" class="has-header" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);">
+   
+        <div class="spacer" style="width: 748px; height: 70px;"></div>
+        <div id="page-markdown1" style="color:#428BCA;font-weight:300;font-size:42px;text-align:center;">
+            <p>Smart Health Subscription</p>
+        </div>
+        <div class="spacer" style="width: 300px; height: 50px;"></div>
+
+        <p>
+            It appears that you are not yet subscribed to Smart Health monthly billing plan of 15 dollars USD. 
+            You will shortly be redirected to the PayPal service for making the payment agreement.
+        </p>
+       
+        <button id="notsubscribed.resubmit" ng-click="reopenpaypal()" style="font-weight:300;color:#428BCA;margin:auto;display:block;width:500px;font-size:21px;background-color:#FFFCFC;" type="submit" class="button button-light  button-block">Please Wait..</button>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+
+
+        <p>
+            After you have successfully confirmed the billing payment with PayPal, click on the button below.
+        </p>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <button id="notsubscribed.activate" ng-click="activatesubscription()" style="font-weight:300;color:#FFFCFC;margin:auto;display:block;width:800px;font-size:21px;background-color:#428BCA;" type="submit" class="button button-light  button-block">Activate Subscription</button>
+        
+      
+     </ion-content>
+</ion-view>
+
+<!--#428BCA mottoblanco-->
+<!--#FFFCFC white-->

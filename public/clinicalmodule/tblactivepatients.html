@@ -1,0 +1,29 @@
+<ion-view title="List of Active Patients">
+    <ion-content padding="true" class="has-header">
+
+        <div class="item item-input-inset">
+
+            <label class="item-input-wrapper">
+                <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search list of active patients">
+            </label>
+        </div>
+
+        <div class="list card" >
+
+            <div class="item" ng-repeat="activepatient in activepatients|filter:searchfilter| limitTo:100" ng-click="showDetails(activepatient)">
+
+
+                        <h2>Family Name: {{activepatient.lastname}}</h2>
+                        <h2>First Name: {{activepatient.firstname}}</h2>
+                        <h2>FACILITY OCCUPIED: {{activepatient.facilityoccupied}}</h2>
+                        <p>{{activepatient.gender}}</p>
+                        <p>{{activepatient.address}}</p>
+                        <p>Date of Birth: {{activepatient.dateofbirthday}} {{activepatient.dateofbirthmonth}} {{activepatient.dateofbirthyear}}</p>
+                        <p>Age: {{activepatient.calculateage}}</p>
+
+                </div>
+
+            </div>
+
+    </ion-content>
+</ion-view>

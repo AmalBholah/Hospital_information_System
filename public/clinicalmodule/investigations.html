@@ -1,0 +1,129 @@
+<ion-content>
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" class="input-label">INVESTIGATIONS</span>
+</label>
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Full blood count</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.fbccheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.fbctext" ng-model="investigations.fbctext" placeholder="Full blood count" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Urea & Electrolytes</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.uecheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.uetext" ng-model="investigations.uetext" placeholder="Urea & Electrolytes" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Serum creatinine</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.creatininecheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.creatininetext" ng-model="investigations.creatininetext" placeholder="Serum creatinine" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Fasting blood sugar</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.fbscheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.fbstext" ng-model="investigations.fbstext" placeholder="Fasting blood sugar" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Serum lipid profile</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.fslcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.fsltext" ng-model="investigations.fsltext" placeholder="Serum lipid profile" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Serum triglycerides</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.tgcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.tgtext" ng-model="investigations.tgtext" placeholder="Serum triglycerides" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Serum uric acid</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.uriccheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.urictext" ng-model="investigations.urictext" placeholder="Serum uric acid" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Imaging</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.imagingcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input"  style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.imagingtext" ng-model="investigations.imagingtext" placeholder="Imaging" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:180px;" class="text-label">Other investigations</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="investigations.otherinvcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="investigations.otherinvtext" ng-model="investigations.otherinvtext" placeholder="Other investigations" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">TREATMENT</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:10px;width:100%;" id="investigations.treatment" ng-model="investigations.treatment" placeholder="Treatment" >
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">PATIENT REVIEW</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:10px;width:100%;" id="investigations.patientreview" ng-model="investigations.patientreview" placeholder="Patient review" >
+<!--List encompasses all items-->
+
+</div><!--END of list div-->
+</ion-content>

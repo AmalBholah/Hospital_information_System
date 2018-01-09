@@ -1,0 +1,26 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 0; max-height: 175px;min-width: 0; max-width: 600px;"
+>
+
+
+  <ion-content>
+      <p></p>
+      <p>If patient is below 18 use email/password registration</p>
+      <p></p>
+      <p>Or if above 18 use national ID to register</p>
+
+    <form ng-submit="closememo()">
+      <div class="list">
+
+        <label class="item">
+             <button class="button button-block button-positive" style="background-color:#428BCA;" type="submit">OK</button>
+             
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

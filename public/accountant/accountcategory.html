@@ -1,0 +1,44 @@
+<ion-view>
+<ion-content padding="true" class="has-header">
+  
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleBack()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="categorysearchfilter" placeholder="Search account category" style="width: 350px;">
+    </label>
+    <button class="button button-small button-positive" ng-click="createaccount()">
+      Create Account
+    </button>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="account in accounts|filter:categorysearchfilter| limitTo:100">
+
+<div class="row">
+<div class="col-60">
+  <h2>Account Category: {{account.category}}</h2>
+  <p>GL NAME : {{account.glname}}</p>
+  <p>GL CODE: {{account.glcode}}</p>
+  <p>ACCOUNT TYPE: {{account.accounttype}}</p>
+</div>
+<div class="col-40">
+  <button class="button button-positive" style="width: 100px;" ng-click="editaccount(account)">
+      Edit
+    </button>
+      <div class="spacer" style="width: 300px; height: 5px;">
+      </div>
+      <button class="button button-assertive" style="width: 100px;" ng-click="deleteaccount(account)">
+      Delete
+    </button>
+</div>
+</div>
+
+
+  </div>
+
+</div>
+
+
+    </ion-content>
+</ion-view>

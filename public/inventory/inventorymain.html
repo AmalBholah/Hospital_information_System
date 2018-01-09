@@ -1,0 +1,122 @@
+<ion-view title="Goods Received Note">
+    <ion-content>
+      <div data-barcode-scanner="barcodeScanned"></div>
+      <form style="padding-left:10px;">
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Stock entry by: </span>
+        <button ng-click="identifystockperson()" id="mainmenu.identifystockperson" style="width:400px;" ng-model="mainmenu.identifystockperson" class="button button-royal"title="Use barcode scanner" uk-tooltip>Click here to identify yourself</button>
+        </label>
+        
+        <label class="item item-input">
+        <span style="color:#387ef5;font-size:18px;" class="input-label">Supplier: </span>
+        <div class="uk-margin">
+        <select id="supplier" class="uk-select" ng-model="mainmenu.supplier" ng-options="x for x in suppliers" ng-change="supplierchange()" class="form-control selectWidth">
+        </select>
+        </div></label>
+
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Date of issue: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.dateofissue" readonly="readonly" id="mainmenu.dateofissue" placeholder="Specify today's date" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Batch No. : </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.batchno" readonly="readonly" id="mainmenu.batchno" placeholder="Batch No." >
+        </label>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Item Name: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.itemname" readonly="readonly" id="mainmenu.itemname" placeholder="Enter Item exact name" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Buying Price: </span>
+       <input type="text" style="font-size:18px;" ng-model="mainmenu.itemcost" readonly="readonly" id="mainmenu.itemcost" placeholder="Enter Item cost price per unit" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Mark Up: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.markup" readonly="readonly" id="mainmenu.markup" placeholder="Markup percentage" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Selling Price: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.sellingprice" readonly="readonly" id="mainmenu.sellingprice" placeholder="Selling Price" >
+        </label>
+
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Package contents: </span>
+       <input type="text" style="font-size:18px;" ng-model="mainmenu.contentdetails" readonly="readonly" id="mainmenu.contentdetails" placeholder="Enter number of drugs/disposables inside the package" >
+        </label>
+
+       <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">EXP Date: </span>
+       <input type="text" style="font-size:18px;" ng-model="mainmenu.expdate" readonly="readonly" id="mainmenu.expdate" placeholder="Enter Item Expiry date" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Barcode: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.barcodevalue" readonly="readonly" id="mainmenu.barcodevalue" placeholder="Barcode scanner value" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Quantity scanned: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.itemcounter" readonly="readonly" id="mainmenu.itemcounter" placeholder="Autoincrementing Item counter" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Amount in stock: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.stkitems" readonly="readonly" id="mainmenu.stkitems" placeholder="Items left in stock" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Category: </span>
+          <input type="text" style="font-size:18px;" ng-model="mainmenu.category" readonly="readonly" id="mainmenu.category" placeholder="Item Category" >
+        </label>
+
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<div class="button-bar">
+  <a class="button button-positive" ng-click="enterstockitem(addeditem)"title="Create an entry" uk-tooltip>Create New Stock Item</a>
+  <a class="button button-balanced" ng-click="editstockitem()"title="Modify details" uk-tooltip>Modify Item Detail</a>
+  <a class="button button-dark" ng-click="manualsearch()" title="Search without barcode" uk-tooltip>Manual Search</a>
+  <a class="button button-royal" ng-click="searchstockitem()"title="Search with scanner" uk-tooltip>Barcode Search</a>
+  <a class="button button-assertive" ng-click="savestockitem()"title="Save Entries" uk-tooltip>Save Listing</a>
+</div>
+
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+ </form>
+ <div>
+        <div class="row header">
+          <div class="col">Item Name</div>
+          <div class="col">Package contents</div>
+          <div class="col">Buying Price(Rs)</div>
+          <div class="col">Markup (%)</div>
+          <div class="col">Selling Price(Rs)</div>
+          <div class="col">EXP Date</div>
+          <div class="col">Barcode</div>
+          <div class="col">Quantity</div>
+          <div class="col">Category</div>
+          <div class="col"></div>
+        </div>
+        <div class="row" ng-repeat="addeditem in addeditems">
+          <div class="col">{{addeditem.itemname}}</div>
+          <div class="col">{{addeditem.contentdetails}}</div>
+          <div class="col">{{addeditem.itemcost}}</div>
+          <div class="col">{{addeditem.markup}}</div>
+          <div class="col">{{addeditem.sellingprice}}</div>
+          <div class="col">{{addeditem.expdate}}</div>
+          <div class="col">{{addeditem.barcodeval}}</div>
+          <div class="col">{{addeditem.quantity}}</div>
+          <div class="col">{{addeditem.category}}</div>
+          <div class="col">
+            <button class="button button-stable" ng-click="emitIndex_edit(addeditem)" title="Change entry details" uk-tooltip>Edit</button>
+            <button class="button button-stable" ng-click="emitIndex_delete(addeditem)" title="Remove this entry" uk-tooltip>Delete</button>
+            </div>
+        </div>
+ </div>
+<div class="spacer" style="height: 40px;"></div>
+           <label class="item item-input">
+          <!--<b style="font-size:30px;">Total :</b>
+         <input type="text" style="font-size:30px;height: 40px;" ng-model="mainmenu.sumtotal">-->
+        </label>
+
+
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<!--<center><button ng-click="submitclaim()" class="button button-positive">Click here to submit claim to Swan</button></center>-->
+
+
+    </ion-content></ion-view>

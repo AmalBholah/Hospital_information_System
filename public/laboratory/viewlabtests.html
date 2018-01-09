@@ -1,0 +1,47 @@
+<ion-view title="View Laboratory Tests">
+<ion-content>
+<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtomenu()">Back</a>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Laboratory tests starting: </span>
+<div class="uk-margin">
+<select id="day" class="uk-select"  ng-model="labtests.day" ng-change="daychange()" ng-options="x for x in days" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="month"  class="uk-select" ng-model="labtests.month" ng-change="monthchange()" ng-options="x for x in months" class="form-control selectWidth" >
+</select></div>
+<div class="uk-margin">
+<select id="year"  class="uk-select" ng-model="labtests.year" ng-options="x for x in years" ng-change="yearchange()" class="form-control selectWidth">
+</select></div>
+ </label>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Laboratory tests ending: </span>
+<div class="uk-margin">
+<select id="daytransfer"  class="uk-select" ng-model="labtests.daytransfer" ng-change="daychangetransfer()" ng-options="x for x in daytransfers" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="monthtransfer"  class="uk-select" ng-model="labtests.monthtransfer" ng-options="x for x in monthtransfers" ng-change="monthchangetransfer()" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="yeartransfer"  class="uk-select" ng-model="labtests.yeartransfer" ng-change="yearchangetransfer()" ng-options="x for x in yeartransfers" ng-options="z for z in yeartransfers" class="form-control selectWidth" >
+</select></div>
+
+</label><button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" ng-click="runsearch()" style="margin-left:10px;" type="submit" title="Search for laboratory results in between selected dates" uk-tooltip>Search</button>
+<div class="spacer" style="width:300px;height:40px;"></div>
+      
+        <div class="row header">
+          <div class="col">ITEM CONSUMED</div>
+          <div class="col">PRICE (Rs)</div>
+          <div class="col">ITEM CATEGORY</div>
+          <div class="col">DATE CONSUMED</div>
+        </div>
+        <div class="row" ng-repeat="addeditem in addeditems">
+          <div class="col">{{addeditem.itemconsumed}}</div>
+          <div class="col">{{addeditem.itemcost}}</div>
+          <div class="col">{{addeditem.itemcategory}}</div>
+          <div class="col">{{addeditem.dateofuse}}</div>
+          
+        </div>
+</ion-content>
+</ion-view>

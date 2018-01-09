@@ -1,0 +1,33 @@
+<div class="spacer" style="width: 300px; height: 100px;"></div>
+<ion-content ng-app="starter">
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="gototools()" style="border:none;font-size:18px;color:#387ef5;">< Back to menu</button>
+</div>
+<!-- END of Navigator definitions-->
+<div class="spacer" style="width: 300px; height: 80px;"></div>
+  
+    <label class="item item-input">
+    <div class="input-label"style="font-size:18px;">
+      Last Menstrual Period:
+    </div>
+    <label><button ng-click="LMP()" id="preg.lmp" type="submit" style="font-size:18px;" class="button button-positive">L.M.P</button></label>
+    </label>
+
+    <label class="item item-input">
+    <div class="input-label"style="font-size:18px;">
+      Period of Gestation:
+    </div>
+       <div class="input-label" id="preg.pog" style="font-size:18px;">
+    </div>
+    </label>
+    
+    <label class="item item-input">
+    <div class="input-label"style="font-size:18px;">
+      Est. date of delivery:
+    </div>
+    <label><button ng-click="EDD()" type="submit" style="font-size:18px;" id="preg.edd" class="button button-positive">E.D.D</button></label>
+    </label>
+
+
+</ion-content>

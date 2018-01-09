@@ -1,0 +1,123 @@
+<ion-view title="MRA Accounts">
+<ion-content padding="true" class="has-header">
+<div class="row">
+<div class="col-60"> 
+  <div class="item item-input-inset">
+    <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleback()">Back</a>
+      <button class="uk-button uk-button-primary" style="margin-left: 100px;" ng-click="printinvoice()" >print tds report</button>
+    </div>
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Accounts starting: </span>
+<div class="uk-margin">
+<select id="day" class="uk-select"  ng-model="mra.day" ng-change="daychange()" ng-options="x for x in days" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="month"  class="uk-select" ng-model="mra.month" ng-change="monthchange()" ng-options="x for x in months" class="form-control selectWidth" >
+</select></div>
+<div class="uk-margin">
+<select id="year"  class="uk-select" ng-model="mra.year" ng-options="x for x in years" ng-change="yearchange()" class="form-control selectWidth">
+</select></div>
+ </label>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Accounts ending: </span>
+<div class="uk-margin">
+<select id="daytransfer"  class="uk-select" ng-model="mra.daytransfer" ng-change="daychangetransfer()" ng-options="x for x in daytransfers" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="monthtransfer"  class="uk-select" ng-model="mra.monthtransfer" ng-options="x for x in monthtransfers" ng-change="monthchangetransfer()" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="yeartransfer"  class="uk-select" ng-model="mra.yeartransfer" ng-change="yearchangetransfer()" ng-options="x for x in yeartransfers" ng-options="z for z in yeartransfers" class="form-control selectWidth" >
+</select></div>
+
+</label>
+
+<!--<button class="button button-stable button-block" ng-click="refresh_list()">Load MRA Accounts</button>-->
+
+
+
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+
+
+ <div>
+        <div class="row header">
+          <div class="col">Doctor</div>
+          <div class="col">TDS (Rs)</div>
+          <div class="col">Patient Examined</div>
+          <div class="col">Date</div>
+          <div class="col"></div>
+
+        </div>
+        <div class="row" ng-repeat="mraitem in mraitems |filter:searchfilter">
+            <div class="col">{{mraitem.itemconsumed}}</div>
+          <div class="col" align="right">{{mraitem.itemcost}}</div>
+          <div class="col" align="right">{{mraitem.patientname}}</div>
+          <div class="col" align="right">{{mraitem.dateofuse}}</div>
+          <div class="col">
+            <button class="button button-small button-positive" ng-click="emitIndex_edit(mraitem)">Edit</button>
+            <button class="button button-small button-assertive" href="#modal-sections" uk-toggle type="submit" ng-click="emitIndex_delete(mraitem)">Delete</button>
+            </div>
+        </div>
+ </div>
+
+<div class="spacer" style="height: 20px;"></div>
+
+        <label class="item item-input">
+        <h3 style="font-size:30px;">Period Total :</h3>
+         <input type="text" style="font-size:30px;height: 40px;text-align: right;" readonly="readonly" ng-model="mra.sumtotalamount">
+        </label>
+
+
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+<div id="modal-sections" uk-modal="center: true">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Services Management</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>WARNING: Deleting this MRA Entry is irreversible. Do you want to continue?</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary uk-modal-close" ng-click="removemra()" type="button">Remove MRA Entry</button>
+        </div>
+    </div>
+</div>
+</div>
+<div class="col-40">
+
+ <!-- <div class="item item-input-inset">
+ <label class="item-input-wrapper">
+      <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search Doctors">
+    </label>
+  </div>-->
+
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+
+        <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar">
+                <span uk-search-icon></span>
+                <input class="uk-search-input" type="search" ng-model="searchfilter" placeholder="Search Doctors">
+            </form>
+        </div>
+
+    </div>
+</nav>
+
+
+  
+<div class="list card" >
+
+<div class="item" ng-repeat="doctor in doctors|filter:searchfilter| limitTo:100" ng-click="selecteddoctor(doctor)">
+
+  <h2>NAME: {{doctor.glname}}</h2>
+  <p>GLCODE: {{doctor.glcode}}</p>
+</div>
+</div>
+</div></div>
+
+</ion-content>
+</ion-view>

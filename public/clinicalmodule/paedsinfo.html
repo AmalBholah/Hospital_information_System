@@ -1,0 +1,52 @@
+<ion-content>
+
+<!--BEGIN PATIENT paedsinfo TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">FURTHER INFORMATION</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Informant</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="paedsinfo.informant" ng-model="paedsinfo.informant" placeholder="Informant" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Birth history</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="paedsinfo.birthhistory"  ng-model="paedsinfo.birthhistory" placeholder="Birth history" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Socioeconomic history</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="paedsinfo.socioeconomic"  ng-model="paedsinfo.socioeconomic" placeholder="Socioeconomic history" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Developmental history</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="paedsinfo.developmentalhistory"  ng-model="paedsinfo.developmentalhistory" placeholder="Developmental history" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Immunization history</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="paedsinfo.immunizationhistory"  ng-model="paedsinfo.immunizationhistory" placeholder="Immunization history" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!--List encompasses all items-->
+</div><!--END of list div-->
+
+</ion-content>

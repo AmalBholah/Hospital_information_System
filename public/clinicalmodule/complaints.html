@@ -1,0 +1,124 @@
+<ion-content>
+
+<!--BEGIN PATIENT complaints TEMPLATE-->
+
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">PRESENTING COMPLAINTS</span>
+</label>
+
+<!--List encompasses all items-->
+<div class="list">
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">1.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;"  ng-model="complaints.presentingone" id="complaints.presentingone" placeholder="Complaints" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">2.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;"  ng-model="complaints.presentingtwo" id="complaints.presentingtwo" placeholder="Complaints" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">3.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;"  ng-model="complaints.presentingthree" id="complaints.presentingthree" placeholder="Complaints" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">HISTORY OF COMPLAINTS</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">1.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;"  ng-model="complaints.historyone" id="complaints.historyone" placeholder="History of complaints" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">2.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" ng-model="complaints.historytwo" id="complaints.historytwo" placeholder="History of complaints" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">3.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" ng-model="complaints.historythree" id="complaints.historythree" placeholder="History of complaints" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" class="input-label">PAST MEDICAL HISTORY</span>
+</label>
+
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Diabetes</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="complaints.dmcheck"
+                    id="complaints.dmcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="complaints.dmtext" ng-model="complaints.dmtext" placeholder="Diabetes" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Hypertension</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="complaints.hbpcheck"
+                    id="complaints.hbpcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="complaints.hbptext" ng-model="complaints.hbptext" placeholder="Hypertension" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Asthma</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="complaints.asthmacheck"
+                    id="complaints.asthmacheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="complaints.asthmatext" ng-model="complaints.asthmatext" placeholder="Asthma" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Others</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="complaints.otherscheck"
+                    id="complaints.otherscheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="complaints.otherstext" ng-model="complaints.otherstext" placeholder="Others" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:8px;" class="input-label">PAST SURGICAL HISTORY</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:10px;width:100%;" id="complaints.pastsurgicaltext" ng-model="complaints.pastsurgicaltext" placeholder="Past surgical history" >
+
+<!--List encompasses all items-->
+
+</div><!--END of list div-->
+
+</ion-content>
+

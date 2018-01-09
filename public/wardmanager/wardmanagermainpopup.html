@@ -1,0 +1,62 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 400px; max-width: 800px;"
+>
+  <ion-header-bar>
+    <h1 class="title">Current Ward: {{mainpopup.wardname}}</h1>
+
+  </ion-header-bar>
+  <ion-content>
+    
+    <label class="item item-input">
+    <span style="color:#387ef5;font-size:18px;" class="input-label">Admission time: </span>
+     
+         <div class="uk-margin">
+     <select id="day" class="uk-select" ng-model="mainpopup.day" ng-change="daychange()" ng-options="x for x in days" style="margin-left: 10px;"class="form-control selectWidth" >
+     </select></div>
+    <div class="uk-margin">
+        <select id="month"  class="uk-select"ng-model="mainpopup.month" ng-change="monthchange()" ng-options="x for x in months" class="form-control selectWidth" style="margin-left: 10px;">
+        </select></div>
+            <div class="uk-margin"><select id="year"  class="uk-select"ng-model="mainpopup.year" ng-options="x for x in years" ng-change="yearchange()" class="form-control selectWidth" style="margin-left: 10px;width: 80px;margin-right: 10px;">
+        </select></div>
+        <h2>at</h2>
+            <div class="uk-margin"><select id="hour"  class="uk-select"ng-model="mainpopup.hour" ng-change="hourchange()" style="margin-left: 10px;margin-right: 10px;" ng-options="x for x in hours" class="form-control selectWidth" >
+        </select></div>
+      
+            <div class="uk-margin"><select id="minute"  class="uk-select"ng-model="mainpopup.minute" ng-change="minutechange()" style="margin-left: 10px;" ng-options="x for x in minutes" class="form-control selectWidth" >
+        </select></div>
+       </label>
+
+  <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Admission ends: </span>
+         <div class="uk-margin">
+     <select id="daytransfer"  class="uk-select"ng-model="mainpopup.daytransfer" ng-change="daychangetransfer()" ng-options="x for x in daytransfers" class="form-control selectWidth"  style="margin-left: 10px;">
+     </select></div>
+            <div class="uk-margin"><select id="monthtransfer"  class="uk-select"ng-model="mainpopup.monthtransfer" ng-options="x for x in monthtransfers" ng-change="monthchangetransfer()" class="form-control selectWidth" style="margin-left: 10px;">
+        </select></div>
+            <div class="uk-margin"><select id="yeartransfer"  class="uk-select"ng-model="mainpopup.yeartransfer" ng-change="yearchangetransfer()" ng-options="x for x in yeartransfers" ng-options="z for z in yeartransfers" class="form-control selectWidth" style="margin-left: 10px;width: 80px;margin-right: 10px;">
+        </select></div>
+        <h2>at</h2>
+           <div class="uk-margin"> <select id="hourtransfer"  class="uk-select"ng-model="mainpopup.hourtransfer" ng-change="hourchangetransfer()" ng-options="x for x in hourtransfers" style="margin-left: 10px;margin-right: 10px;" class="form-control selectWidth" >
+        </select></div>
+       
+            <div class="uk-margin"><select id="minutetransfer"  class="uk-select"ng-model="mainpopup.minutetransfer" ng-options="x for x in minutetransfers" ng-change="minutechangetransfer()" style="margin-left: 10px;" class="form-control selectWidth" >
+        </select></div>
+       </label>
+
+         <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">TRANSFER TO: </span>
+            <div class="uk-margin"><select id="transferward"  class="uk-select"ng-model="mainpopup.transferward"  ng-options="x for x in wardlists" ng-change="transferward()" class="form-control selectWidth" style="margin-left: 10px;width: 200px;margin-right: 10px;">
+        </select></div>
+        
+         </label>
+
+        <div class="spacer" style="width: 300px; height: 0px;"></div>
+          <centre><button class="button button-block button-positive" ng-click="submititem(mainpopup)" type="submit">TRANSFER NOW</button></centre>
+     
+     
+  </ion-content>
+</ion-modal-view>

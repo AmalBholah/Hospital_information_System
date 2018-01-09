@@ -1,0 +1,28 @@
+<ion-view title="List of Transferred Stock Items">
+<ion-content padding="true" class="has-header">
+ 
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtomenu()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" style="width:400px" ng-model="searchfilter" placeholder="Search list of Transferred Stock items">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="stockitem in stockitems|filter:searchfilter| limitTo:100" ng-click="showDetails(stockitem)">
+
+  <h2>ITEM NAME: {{stockitem.itemname}}</h2>
+  <p>BATCH NO. {{stockitem.batchno}}</p>
+  <p>EXP DATE: {{stockitem.expdateday}} {{stockitem.expdatemonth}} {{stockitem.expdateyear}}</p>
+  <p>AMOUNT: {{stockitem.quantity}}</p>
+  <p>BARCODE VALUE: {{stockitem.barcodeval}}</p>
+  <p>Transferred from : {{stockitem.transferfrom}}</p>
+  <p>Transferred to : {{stockitem.transferto}}</p>
+  <p>Timestamp : {{stockitem.timestamp}}</p>
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>

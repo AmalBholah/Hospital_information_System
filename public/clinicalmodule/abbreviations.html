@@ -1,0 +1,17 @@
+<div class="spacer" style="width: 300px; height: 100px;"></div>
+<ion-content ng-app="starter">
+<div class="bar bar-header item-input-inset">
+<label class="item-input-wrapper">
+<i class="icon ion-ios-search placeholder-icon"></i>
+<input type="search" id="searchbar"ng-model="abbrfinder" placeholder="Not all abbreviations are displayed below, type to search from entire database">
+</label>
+<button class="button button-positive" ng-click="gototools()">
+   Go back to menu
+</button>
+</div>
+<ion-list>
+ <ion-item ng-repeat="content in contents|filter:abbrfinder | limitTo: 50" ng-click="retrievedItem(content.item)">
+{{content.item}}
+</ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-content>
+
+<!--BEGIN PATIENT gynaeinfo TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">GYNAECOLOGICAL EXAMINATION</span>
+</label>
+
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Pelvic examination</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="gynaeexam.pelvicexam"  ng-model="gynaeexam.pelvicexam" placeholder="Pelvic examination" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">External genitalia</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="gynaeexam.externalgenitalia"  ng-model="gynaeexam.externalgenitalia" placeholder="External genitalia" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Speculum examination</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="gynaeexam.speculum"  ng-model="gynaeexam.speculum" placeholder="Speculum examination" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Bimanual examination</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="gynaeexam.bimanual"  ng-model="gynaeexam.bimanual" placeholder="Bimanual examination" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!--List encompasses all items-->
+</div><!--END of list div-->
+
+</ion-content>

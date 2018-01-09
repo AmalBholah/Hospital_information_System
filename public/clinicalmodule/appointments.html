@@ -1,0 +1,19 @@
+<div class="spacer" style="width: 300px; height: 80px;"></div>
+<ion-content>
+<div class="bar bar-header">
+<a class="button icon-right button-clear button-dark" ng-click="gotosaveconsultations()" style="color:#387ef5;margin-left:auto;">Add Appointment</a>
+</div>
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<flex-calendar options="options" events="events"></flex-calendar>
+<div class="spacer" style="width: 300px; height: 10px;"></div>
+
+ <ul>
+        <li ng-repeat="appt in appts">
+          <a class="item item-avatar" ng-click="listclicked(appt)">
+      <img src="img/calendar.png">
+      <h2>{{appt.key_appointment_title}}</h2>
+       <p>{{appt.key_timebuffer}} with {{appt.key_patientname}}</p>
+    </a>
+        </li>
+    </ul>
+</ion-content>

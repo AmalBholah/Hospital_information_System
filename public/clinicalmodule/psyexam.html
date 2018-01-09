@@ -1,0 +1,108 @@
+<ion-content>
+<!--BEGIN PATIENT psyexam TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;" class="input-label">MENTAL STATE EXAMINATION</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Appearance</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.appearance" ng-model="psyexam.appearance" placeholder="Appearance" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Behaviour</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.behaviour" ng-model="psyexam.behaviour" placeholder="Behaviour" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Speech</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.speech"  ng-model="psyexam.speech" placeholder="Speech" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Thought content</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.thoughtcontent"  ng-model="psyexam.thoughtcontent" placeholder="Thought content" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Mood</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.mood"  ng-model="psyexam.mood" placeholder="Mood" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Delusions</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="psyexam.delusioncheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="psyexam.delusiontext"  ng-model="psyexam.delusiontext" placeholder="Delusions" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Hallucinations</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="psyexam.hallucinationcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="psyexam.hallucinationtext"  ng-model="psyexam.hallucinationtext" placeholder="Hallucinations" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Illusions</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="psyexam.illusioncheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="psyexam.illusiontext"  ng-model="psyexam.illusiontext" placeholder="Illusions" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Thought interference</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.thoughtinterference"  ng-model="psyexam.thoughtinterference" placeholder="Thought interference" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Cognitive functions</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.cognitivefunctions"  ng-model="psyexam.cognitivefunctions" placeholder="Cognitive functions" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Insights</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.insights"  ng-model="psyexam.insights" placeholder="Insights" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Judgements</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="psyexam.judgements"  ng-model="psyexam.judgements" placeholder="Judgements" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!--List encompasses all items-->
+</div><!--END of list div-->
+
+</ion-content>

@@ -1,0 +1,88 @@
+<ion-content>
+
+<!--BEGIN PATIENT opthalexam TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" type="submit" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" type="submit" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" type="submit" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:15px;" class="input-label">OCULAR EXAMINATION</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Visual acuity</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.visualacuity"  ng-model="opthalexam.visualacuity" placeholder="Visual acuity" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Head posture/forehead</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.headposture"  ng-model="opthalexam.headposture" placeholder="Head posture/forehead" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Eyebrows/eyelids</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.eyebrows"  ng-model="opthalexam.eyebrows" placeholder="Eyebrows/eyelids" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Lacrimal apparatus</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.lacrimal"  ng-model="opthalexam.lacrimal" placeholder="Lacrimal apparatus" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Conjunctiva</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.conjunctiva"  ng-model="opthalexam.conjunctiva" placeholder="Conjunctiva" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Sclera</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.sclera"  ng-model="opthalexam.sclera" placeholder="Sclera" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Cornea</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.cornea"  ng-model="opthalexam.cornea" placeholder="Cornea" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Anterior chamber</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.anteriorchamber"  ng-model="opthalexam.anteriorchamber" placeholder="Anterior chamber" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Lens</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.lens"  ng-model="opthalexam.lens" placeholder="Lens" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Fundus</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.fundus"  ng-model="opthalexam.fundus" placeholder="Fundus" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:190px;" class="text-label">Other findings</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:43px;padding-top:4px;height:41px;width:5000px;" id="opthalexam.otherfindings" ng-model="opthalexam.otherfindings" placeholder="Other findings" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!--List encompasses all items-->
+</div><!--END of list div-->
+
+</ion-content>

@@ -1,0 +1,90 @@
+<ion-content ng-app="starter">
+<div class="bar bar-header">
+    <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="gobacktoconsultation()" style="color:#387ef5;">Back to consultations</a>
+<a class="button icon-right button-clear button-dark" ng-click="overridebacktoconsultation()" style="color:red;">Cancel</a>
+</div>
+   <div class="spacer" style="width: 748px; height:50px;"></div>
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-right:auto;padding-left:5px;" class="input-label">Medication</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:20px;width:100%;" id="addmedications.medication" placeholder="Medication" >
+
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-right:auto;padding-left:5px;" class="input-label">Dose (including units e.g mg)</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:20px;width:100%;" id="addmedications.dose" placeholder="Dose with units" >
+
+
+<!--Primary title with secondary title to the right side-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:200px;padding-left:10px;" class="text-label">Mode of administration</div>
+<div style="color:#387ef5;font-size:18px;min-width:100px;padding-left:20px;" id="addmedications.mode" class="text-label">ORAL</div>
+</div><!--END of primary title with secondary title to the right side-->
+
+<div class="item range range-positive" style="border:none;">
+<input type="range" id="addmedications.modeslider" ng-model="modeslider.volume" name="volume" min="0" max="10">
+</div>
+
+<!--Primary title with secondary title to the right side-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:200px;padding-left:10px;" class="text-label">Dose frequency</div>
+<div style="color:#387ef5;font-size:18px;min-width:100px;padding-left:20px;" id="addmedications.dosefreq" class="text-label">OD</div>
+</div><!--END of primary title with secondary title to the right side-->
+
+<div class="item range range-positive" style="border:none;">
+<input type="range" id="addmedications.dosefreqslider" ng-model="dosefreqslider.volume" name="volume" min="0" max="12">
+</div>
+
+<div class="row">
+  <div class="col col-33"></div>
+  <div class="col col-34"><button ng-click="firstbuttonclick()" style="font-size:18px;" id="addmedications.firstbutton" class="button button-clear button-positive">Set first dose</button></div>
+  <div class="col col-33"></div>
+</div>
+
+<div class="row">
+  <div class="col col-33"></div>
+  <div class="col col-34"><button ng-click="secondbuttonclick()" style="font-size:18px;" id="addmedications.secondbutton" class="button button-clear button-positive">Set second dose</button></div>
+  <div class="col col-33"></div>
+</div>
+
+<div class="row">
+  <div class="col col-33"></div>
+  <div class="col col-34"><button ng-click="thirdbuttonclick()" style="font-size:18px;" id="addmedications.thirdbutton" class="button button-clear button-positive">Set third dose</button></div>
+  <div class="col col-33"></div>
+</div>
+
+<div class="row">
+  <div class="col col-33"></div>
+  <div class="col col-34"><button ng-click="fourthbuttonclick()" style="font-size:18px;" id="addmedications.fourthbutton" class="button button-clear button-positive">Set fourth dose</button></div>
+  <div class="col col-33"></div>
+</div>
+
+<div class="row">
+  <div class="col col-33"></div>
+  <div class="col col-34"><button ng-click="fifthbuttonclick()" style="font-size:18px;" id="addmedications.fifthbutton" class="button button-clear button-positive">Set fifth dose</button></div>
+  <div class="col col-33"></div>
+</div>
+
+<!--Primary title with secondary title to the right side-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:200px;padding-left:10px;" class="text-label">Duration</div>
+
+</div><!--END of primary title with secondary title to the right side-->
+
+<input type="text" style="font-size:18px;height:41px;padding-left:20px;width:100%;" id="addmedications.duration" placeholder="Duration" >
+
+<!--Primary title with secondary title to the right side-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:200px;padding-left:10px;" class="text-label">Choose one modality</div>
+<div style="color:#387ef5;font-size:18px;min-width:100px;padding-left:20px;" id="addmedications.modality" class="text-label">days</div>
+</div><!--END of primary title with secondary title to the right side-->
+
+<div class="item range range-positive" style="border:none;">
+<input type="range" id="addmedications.durationslider" ng-model="durationslider.volume" name="volume" min="0" max="10">
+</div>
+</ion-content>
+

@@ -1,0 +1,92 @@
+<div class="spacer" style="width: 300px; height: 100px;"></div>
+<ion-content ng-app="starter">
+
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="gototools()" style="border:none;font-size:18px;color:#387ef5;">< Back to menu</button>
+</div>
+<!-- END of Navigator definitions-->
+
+
+ 
+  <label class="item item-input item-select"style="font-size:18px;">
+    <div class="input-label"style="font-size:18px;">
+      Select Gender:
+    </div>
+    <select id = "creat.gender">
+      <option selected>Male</option>
+      <option>Female</option>
+    </select>
+  </label>
+  
+    <label class="item item-input">
+    <div class="input-label"style="font-size:18px;">
+      Age:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="creat.age" ng-model="creat.age" placeholder="Enter age"> </label>
+  
+  </label>
+  
+      <label class="item item-input item-select">
+    <div class="input-label"style="font-size:18px;">
+      Weight:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="creat.weight" ng-model="creat.weight" placeholder="Enter weight"> </label>
+  
+    <select id="creat.weightselector">
+      <option selected>kg</option>
+      <option>lb</option>
+      <option>g</option>
+    </select>
+  </label>
+  
+        <label class="item item-input item-select">
+    <div class="input-label"style="font-size:18px;">
+      Creatinine:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="creat.creatinine" ng-model="creat.creatinine" placeholder="Enter creatinine"> </label>
+  
+    <select id="creat.creatselector">
+      <option selected>mg/dL</option>
+      <option>uMol/L</option>
+    </select>
+  </label>
+  <div class="spacer" style="width: 300px; height:40px;"></div>
+          <div class="row">
+        <div class="col col-50"></div>
+        <div class="col col-50"><button id="creat.calculate" ng-click="calculatecreatinine()" type="submit" style="font-size:18px;" class="button button-positive">Calculate</button></div>
+        </div>
+        
+<div class="spacer" style="width: 300px; height:20px;"></div>  
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" id="creat.results" class="input-label"></span>
+</label>
+<div class="spacer" style="width: 300px; height:20px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" class="input-label">Type in all fields and tap calculate</span>
+</label>
+
+<div class="spacer" style="width: 300px; height:10px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">STAGES OF KIDNEY DISEASE</span>
+</label>
+ 
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Stage 1: GFR more than 90</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Stage 2: GFR 60-89</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Stage 3: GFR 30-59</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Stage 4: GFR 15-29</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Stage 5: GFR less than 15</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Based on Cockroft-Gault formula</span>
+</label>
+</ion-content>

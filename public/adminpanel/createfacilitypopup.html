@@ -1,0 +1,34 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 250px; min-width: 0; max-width: 600px;"
+>
+  <ion-header-bar>
+    <h1 class="title">Fill in all fields</h1>
+
+  </ion-header-bar>
+  <ion-content>
+      
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Facility name </span>
+          <input type="text" placeholder="Facility Name." ng-model="mainpopup.facility" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Category:  </span>
+        
+        <div class="uk-margin">
+        <select id="category" class="uk-select" ng-model="mainpopup.category" ng-change="categorychange()" class="form-control selectWidth">
+          <option value="WARD">WARD</option>
+          <option value="OTHERS">OTHERS</option>
+        </select>
+        </div>
+        </label>
+        <centre><button class="button button-block button-positive" ng-click="submititem(mainpopup)" type="submit">Done</button></centre>
+     
+     </div>
+     
+  </ion-content>
+</ion-modal-view>

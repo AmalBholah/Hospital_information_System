@@ -1,0 +1,99 @@
+<ion-content>
+<!--BEGIN PATIENT mdpartone TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:100px;" class="input-label">RESPIRATORY SYSTEM EXAMINATION</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Inspection</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.inspectrs" ng-model="mdpartone.inspectrs" placeholder="Inspection" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Palpation</div>
+<label class="item item-input"  style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.palpaters" ng-model="mdpartone.palpaters" placeholder="Palpation" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Percussion</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.percussrs"  ng-model="mdpartone.percussrs" placeholder="Percussion" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Auscultation</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.auscultaters"  ng-model="mdpartone.auscultaters" placeholder="Auscultation" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:80px;" class="input-label">CARDIOVASCULAR SYSTEM EXAMINATION</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Inspection</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.inspectcvs" ng-model="mdpartone.inspectcvs" placeholder="Inspection" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Palpation</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.palpatecvs"  ng-model="mdpartone.palpatecvs" placeholder="Palpation" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Percussion</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.percusscvs" ng-model="mdpartone.percusscvs" placeholder="Percussion" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Auscultation</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.auscultatecvs"  ng-model="mdpartone.auscultatecvs" placeholder="Auscultation" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:80px;" class="input-label">GASTROINTESTINAL SYSTEM EXAMINATION</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Inspection</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.inspectgit"  ng-model="mdpartone.inspectgit" placeholder="Inspection" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Palpation</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.palpategit" ng-model="mdpartone.palpategit" placeholder="Palpation" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Percussion</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.percussgit"  ng-model="mdpartone.percussgit" placeholder="Percussion" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:130px;" class="text-label">Auscultation</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="mdpartone.auscultategit"  ng-model="mdpartone.auscultategit" placeholder="Auscultation" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!--List encompasses all items-->
+</div><!--END of list div-->
+</ion-content>

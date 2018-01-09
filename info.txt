@@ -1,0 +1,184 @@
+/**
+	 * Public Static Function that posts the sales accounting records
+	 * All Doctor Services are posted to the Doctor Liability accounts : CR
+	 * All Non Doctor Services are posted to the Sales Account : CR
+	 * All discount are posted to the discount payable account : DR
+	 * All Net Sales (Sum Due [Doctor + Non Doctor] - Discount) are posted to Debtor Account : DR
+	 *
+	 * @param : VisitID
+	 * @return: OK if successful, error message otherwise
+	 *
+	 */public static function postSales($VID)
+
+
+/*
+*
+ ** Account to be Debited is:
+ * IF payMethod = CASH THEN
+ * 		Debit cash Account
+ *
+ * ELSE IF payMethod = CREDIT CARD THEN
+ * 		Debit Bank Account - Bank Charges and then Debit Bank Charges Account
+ *
+ * ELSE IF payMethod = CHEQUE THEN
+ * 		Debit cash Account
+ *
+ * ELSE IF payMethod = DIRECT TRANSFER THEN
+ *
+ * 		Debit Bank Account
+ * ELSE IF payMethod = INSURANCE THEN
+ * 		Debit Bank Account
+ *
+ * END IF
+ *
+ * Credit Debtor Account with a line for each BillNo
+ *
+
+ */
+
+
+ /**
+ 	 * Public Static Function that posts doctor payments with CCard Charges and TDS adjustments
+ 	 * @param : bankAccID : bank account ID from which cheque is drawn to pay doctor
+ 	 * @param : visitFK: visit ID of bill
+ 	 * @param : payerFK : payer of bill
+ 	 * @param : billNo
+ 	 * @param : docFK : doctor being paid
+ 	 * @param : docVouchNo : voucher no generated
+ 	 * @param : mraFlagYN : TDS Yes or No chargeable
+ 	 * @param : amtPaid : amt paid to doctor before credit card charges and TDS
+ 	 * @param : ccardCharges : credit card charges payable by doctor
+ 	 * @param : netCcardCharges : amt paid to doctor after credit card charges
+ 	 * @param : mraPercent : TDS rate
+ 	 * @param : mraAmt : TDS amt to be paid by doctor
+ 	 * @param : netMraAmt : amt paid to doctor after credit card charges and TDS	*
+ 	 * @return: OK if posting successful, error message otherwise
+ 	 */
+   //step 1:
+   //create the credit card charges posting if $ccardCharges > 0: DR DOCTOR ACC, CR CCARD ACC
+   //step 2:
+   //create the TDS posting if $mraAmt > 0: DR DOCTOR ACC, CR TDS ACC
+   //step 3:
+   //create the Doctor Paid posting: DR DOCTOR ACC, CR BANK ACC
+
+tblbillgroup
+
+DRUGS
+DISPOSABLES
+DOCTORS
+LABORATORY
+SERVICES
+CONSUMABLES
+
+
+
+//PDF GENERATOR - JSPDF
+
+// You'll need to make your image into a Data URL
+// Use http://dataurl.net/#dataurlmaker
+var imgData = 'data:image/jpeg;base64.....";
+
+var doc = new jsPDF()
+
+//BEGIN MEDISAVE HEADER
+doc.setFontSize(8);
+doc.setFontType('bold');
+doc.text(100, 10, 'INVOICE');
+doc.setFontType('normal');
+doc.text(100, 15, 'BRN C07007746');
+doc.text(100, 20, 'ST JEAN ROAD');
+doc.text(100, 25, 'QUATRE BORNES');
+doc.text(100, 30, 'Tel: 230 427 7000-4');
+doc.text(100, 35, 'Fax: 230 424 1538');
+doc.text(100, 40, 'Email: hcisgm@intnet.mu');
+doc.addImage(imgData, 'JPEG', 20, 8, 70, 35);
+doc.rect(10, 5, 190, 40);
+//END MEDISAVE HEADER
+
+//BEGIN MEDISAVE SUBHEADER & PATIENT DETAILS
+
+//Construct minibox on the right handside of the page
+doc.rect(125, 50, 75, 15);
+doc.setFontType('bold');
+doc.text(128, 55,"Invoice Number: ");
+doc.text(128, 60,"Date: ");
+doc.setFontType('normal');
+doc.text(155, 55,"MED841809185");
+doc.text(155, 60,"27/03/2017");
+//END minibox
+//Construct patient details box on left hand side (borderless)
+doc.setFontType('bold');
+doc.text(10, 55,"Patient:");
+doc.text(10, 60,"Address:");
+doc.text(10, 65,"Type:");
+doc.text(10, 70,"Payer:");
+doc.text(10, 75,"DOA:");
+doc.text(10, 80,"DOD:");
+doc.text(10, 85,"Room:");
+
+doc.setFontType('normal');
+doc.text(25, 55,"Child A");
+doc.text(25, 60,"Port Louis");
+doc.text(25, 65,"Inpatient");
+doc.text(25, 70,"Father of A");
+doc.text(25, 75,"11/03/2017 at 07:00 AM");
+doc.text(25, 80,"27/03/17 at 11:00 AM");
+doc.text(25, 85,"Single");
+
+//END Construct patient details box on left hand side (borderless)
+//END MEDISAVE SUBHEADER & PATIENT DETAILS
+
+
+//Engage patient biodata controller @params
+  window.localStorage.setItem('dashboardtype','patient');
+  window.localStorage.setItem("memalloc","0:0:0:0:1:1:0:1:0:0:0:0:0:0:0:1:1:1:0:0:0:0:0:0:1:1");
+  window.localStorage.setItem("patientid","01234");
+  window.localStorage.setItem("patientname","testpatient");
+  window.localStorage.setItem("savemode","create");//Default consultation mode of operation
+  window.localStorage.setItem("uuidlock","unlock");
+
+
+
+//CLINICAL MODULE RIGHT HAND SIDE NAVIGATOR
+
+<!--PLACE AT TOP OF HTML AFTER ION-VIEW-->
+        <ion-nav-buttons side="right" ng-show="false">
+        <button class="button button-icon button-clear ion-android-exit" title="Options" uk-tooltip uk-toggle="target: #offcanvas-flip">
+        </button>
+      </ion-nav-buttons>
+
+<!--PLACE AT BOTTOM OF HTML-->
+<div class="uk-offcanvas-content">
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3>Patient Registration Options</h3>
+
+            <p>Please make sure you filled in the registration form correctly before proceeding.</p>
+
+          <a class="button button-dark" type="button"  uk-toggle="target: #offcanvas-flip" style="width:300px;"ng-click="registerpatient()">Register Manually</a>
+          <div class="spacer" style="width: 600px; height:20px;"></div>
+
+          <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="registerpatientnfc()">Register with Card</button>
+          <div class="spacer" style="width: 600px; height:20px;"></div>
+
+
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="usecard()">Search using card</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="manualsearch()">Manual search</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="emergency()">Emergency</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="clockpatientin()">Clock Patient In</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-dark" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="viewclockedinpatients()">View clocked in patients</button>
+            <div class="spacer" style="width: 600px; height:20px;"></div>
+            <button class="button button-positive" style="width:300px;" uk-toggle="target: #offcanvas-flip"ng-click="pastclockedinpatients()">Past clocked in patients</button>
+
+
+        </div>
+    </div>
+
+</div>

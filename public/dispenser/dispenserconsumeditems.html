@@ -1,0 +1,25 @@
+<ion-view title="List of Consumed items">
+<ion-content padding="true" class="has-header">
+ 
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtomenu()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search list of transactions">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="itemconsumed in itemconsumeds|filter:searchfilter| limitTo:100" ng-click="showDetails(itemconsumed)">
+
+  <h2>{{itemconsumed.patientname}}</h2>
+  <p>Items consumed: {{itemconsumed.quantity}} {{itemconsumed.packagetype}} of {{itemconsumed.itemconsumed}}</p>
+  <p>Item cost/quantity: {{itemconsumed.itemcost}}</p>
+  <p>{{itemconsumed.dateofuse}}</p>
+  
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>

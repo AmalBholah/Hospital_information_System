@@ -1,0 +1,51 @@
+
+<div class="spacer" style="width: 300px; height: 100px;"></div>
+<ion-content ng-app="starter">
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="gototools()" style="border:none;font-size:18px;color:#387ef5;">< Back to menu</button>
+</div>
+<!-- END of Navigator definitions-->
+ 
+ <div class="spacer" style="width: 300px; height: 80px;"></div>
+    <label class="item item-input">
+    <div class="input-label"style="font-size:18px;">
+      Heart rate/Pulse:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="qtc.heartrate" ng-model="qtc.heartrate" placeholder="Enter Heart rate/Pulse"> </label>
+      <div class="input-label"style="font-size:18px;">
+      beats/min
+    </div>
+  </label>
+  
+      <label class="item item-input item-select">
+    <div class="input-label"style="font-size:18px;">
+      QT Interval:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="qtc.interval" ng-model="qtc.interval" placeholder="Enter QT Interval"> </label>
+        <div class="input-label"style="font-size:18px;">
+      msec
+    </div>
+    </label>
+ 
+ <div class="spacer" style="width: 300px; height: 100px;"></div>
+          <div class="row">
+        <div class="col col-50"></div>
+        <div class="col col-50"><button id="qtc.calculate" ng-click="calculateqtc()" type="submit" style="font-size:18px;" class="button button-positive">Calculate</button></div>
+        </div>
+        
+<div class="spacer" style="width: 300px; height:20px;"></div>  
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" id="qtc.results" class="input-label"></span>
+</label>
+<div class="spacer" style="width: 300px; height:20px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" class="input-label">Type in all fields and tap calculate</span>
+</label>
+
+<div class="spacer" style="width: 300px; height:10px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Normal QTc <= 440 msec</span>
+</label>
+ 
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-view title="Cashier">
+<ion-content padding="true" class="has-header">
+ 
+<div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search list of active patients">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="activepatient in activepatients|filter:searchfilter| limitTo:100">
+    <div class="row">
+
+
+  <div class="col">
+  <h2>{{activepatient.lastname +" "+ activepatient.firstname}}</h2>
+  <p>{{activepatient.gender}}</p>
+  <p>{{activepatient.address}}</p>
+  <p>Date of Birth: {{activepatient.dateofbirthday}} {{activepatient.dateofbirthmonth}} {{activepatient.dateofbirthyear}}</p>
+  <p>Age : {{activepatient.calculateage}}</p>
+  </div>
+
+
+        <div class="col">
+
+            <div class="spacer" style="width: 300px; height: 40px;"></div>
+            <button class="uk-button uk-button-primary"ng-click="printinvoicepdf(activepatient)" style="width:200px;">PRINT INVOICE</button>
+            <div class="spacer" style="width: 300px; height: 20px;"></div>
+            <button class="uk-button uk-button-danger" ng-click="printreceiptpdf(activepatient)" style="width:200px;">PRINT RECEIPT</button>
+
+
+        </div>
+
+
+
+</div>
+
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>

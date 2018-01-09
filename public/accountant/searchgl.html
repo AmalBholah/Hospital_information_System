@@ -1,0 +1,99 @@
+<ion-view title="Accounts Manager">
+<ion-content padding="true" class="has-header">
+
+ <center>
+<h1>Accounts Manager</h1></center>
+
+<div class="spacer" style="width: 300px; height: 30px;"></div>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">GL Account: </span>
+<div class="uk-margin"><select id="item" ng-model="searchgl.item"  class="uk-select" ng-change="itemchange()" ng-options="x for x in items" style="width: 400px;" class="form-control selectWidth">
+</select></div>
+
+</label>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Accounts starting: </span>
+<div class="uk-margin">
+<select id="day" class="uk-select"  ng-model="searchgl.day" ng-change="daychange()" ng-options="x for x in days" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="month"  class="uk-select" ng-model="searchgl.month" ng-change="monthchange()" ng-options="x for x in months" class="form-control selectWidth" >
+</select></div>
+<div class="uk-margin">
+<select id="year"  class="uk-select" ng-model="searchgl.year" ng-options="x for x in years" ng-change="yearchange()" class="form-control selectWidth">
+</select></div>
+ </label>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Accounts ending: </span>
+<div class="uk-margin">
+<select id="daytransfer"  class="uk-select" ng-model="searchgl.daytransfer" ng-change="daychangetransfer()" ng-options="x for x in daytransfers" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="monthtransfer"  class="uk-select" ng-model="searchgl.monthtransfer" ng-options="x for x in monthtransfers" ng-change="monthchangetransfer()" class="form-control selectWidth">
+</select></div>
+<div class="uk-margin">
+<select id="yeartransfer"  class="uk-select" ng-model="searchgl.yeartransfer" ng-change="yearchangetransfer()" ng-options="x for x in yeartransfers" ng-options="z for z in yeartransfers" class="form-control selectWidth" >
+</select></div>
+</label>
+
+
+
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+
+
+ <div>
+        <div class="row header">
+          <div class="col">Identifier</div>
+          <div class="col">Description</div>
+          <div class="col">Amount in Total</div>
+          <div class="col">Amount Paid</div>
+          <div class="col">Amount Due</div>
+          <div class="col">Status</div>
+          <div class="col">Date</div>
+          <div class="col">Options</div>
+
+        </div>
+        <div class="row" ng-repeat="addeditem in addeditems">
+            <div class="col">{{addeditem.glname}}</div>
+          <div class="col">{{addeditem.itemdescription}}</div>
+          <div class="col" align="right">{{addeditem.totalamount}}</div>
+          <div class="col" align="right">{{addeditem.amountpaid}}</div>
+          <div class="col" align="right">{{addeditem.amountdue}}</div>
+          <div class="col" align="right">{{addeditem.status}}</div>
+          <div class="col" align="right">{{addeditem.date}}</div>
+          <div class="col">
+            <button class="button button-small button-positive" ng-click="emitIndex_edit(addeditem)">Edit</button>
+            <button class="button button-small button-assertive" ng-click="emitIndex_delete(addeditem)">Delete</button>
+            </div>
+        </div>
+ </div>
+
+<div class="spacer" style="height: 20px;"></div>
+
+        <label class="item item-input">
+        <h3 style="font-size:30px;">Sum Total :</h3>
+         <input type="text" style="font-size:30px;height: 40px;text-align: right;" readonly="readonly" ng-model="searchgl.sumtotalamount">
+        </label>
+
+        <label class="item item-input">
+        <h3 style="font-size:30px;">Sum Paid :</h3>
+         <input type="text" style="font-size:30px;height: 40px;text-align: right;" readonly="readonly" ng-model="searchgl.sumamountpaid">
+        </label>
+
+        <label class="item item-input">
+        <h3 style="font-size:30px;">Sum Due :</h3>
+         <input type="text" style="font-size:30px;height: 40px;text-align: right;" readonly="readonly" ng-model="searchgl.sumamountdue">
+        </label>
+
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+ <div class="button-bar">
+   <a class="button button-royal" type="button" style="width: 200px;margin-left: 20px;" ng-click="loadaccount()">Load Account</a>
+   <a class="button button-positive" type="button" style="width: 300px;" ng-click="managecategory()">Create/Edit Accounts</a>
+   <a class="button button-balanced" type="button" style="width: 300px;" ng-click="makeglentry()">Make a GL Entry</a>
+</div>
+
+</ion-content>
+</ion-view>

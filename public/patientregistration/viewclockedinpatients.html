@@ -1,0 +1,62 @@
+<ion-view title="List of Active Patients">
+<ion-content padding="true" class="has-header">
+ 
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="backtomenu()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" style="width:300px" ng-model="searchfilter" placeholder="Search list of active patients">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="activepatient in activepatients|filter:searchfilter| limitTo:100">
+
+<div class="row">
+<div class="col-60">
+  <h2>Family Name: {{activepatient.lastname}}</h2>
+  <h2>First Name: {{activepatient.firstname}}</h2>
+  <h2>FACILITY OCCUPIED: {{activepatient.facilityoccupied}}</h2>
+  <p>{{activepatient.gender}}</p>
+  <p>{{activepatient.address}}</p>
+  <p>Date of Birth: {{activepatient.dateofbirthday}} {{activepatient.dateofbirthmonth}} {{activepatient.dateofbirthyear}}</p>
+  <p>Age: {{activepatient.calculateage}}</p>
+</div>
+<div class="col-40">
+       <div class="spacer" style="width: 300px; height: 50px;"></div>
+    <button class="uk-button uk-button-primary" style="width: 150px;"  ng-click="showclockedinDetails(activepatient)" href="#modal" uk-toggle >DETAILS</button>
+     <div class="spacer" style="width: 300px; height: 10px;"></div>
+    <button class="uk-button uk-button-danger" style="width: 150px;" ng-click="removeactivepatient(activepatient)">CHECK OUT</button>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id="modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Clocked-in patient details</h2>
+        <p>Family Name: {{patient.lastname}}</p>
+        <p>Given Name: {{patient.firstname}}</p>
+        <p>WARD OCCUPIED: {{patient.facilityoccupied}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Date of Birth: {{patient.dateofbirthday}} {{patient.dateofbirthmonth}} {{patient.dateofbirthyear}}</p>
+        <p>Address: {{patient.address}}</p>
+        <p>National ID: {{patient.nic}}</p>
+        <p>Phone Number: {{patient.phonenumber}}</p>
+        <p>Email: {{patient.email}}</p>
+        <p>Referred by Doctor: {{patient.referringdoctor}}</p>
+        <p>Payment Method: {{patient.paymentmethod}}</p>
+        <p>Gender: {{patient.gender}}</p>
+        <p>Notes: {{patient.notes}}</p>
+
+    </div>
+
+
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>

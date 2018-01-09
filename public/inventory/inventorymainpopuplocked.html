@@ -1,0 +1,139 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 750px; min-width: 0; max-width: 600px;"
+>
+  <ion-header-bar>
+    <h1 class="title">Fill in all fields</h1>
+
+  </ion-header-bar>
+  <ion-content>
+      
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Supplier</span>
+          <input type="text" placeholder="Specify Supplier" readonly="readonly"  ng-model="mainpopup.supplier" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Batch No.  </span>
+          <input type="text" placeholder="Specify Batch No." readonly="readonly"  ng-model="mainpopup.batchno" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Item:  </span>
+          <input type="text" placeholder="Please specify item" readonly="readonly"  ng-model="mainpopup.itemname" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Package contents:  </span>
+          <input type="text" placeholder="Amount of items inside package"  readonly="readonly" ng-model="mainpopup.contentdetails" >
+        </label>
+       <label class="item item-input">
+          <span class="input-label">Buying Price (Rs): </span>
+          <input type="number" placeholder="Numbers only" ng-model="mainpopup.itemcost" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Markup</span>
+          <input type="number" placeholder="Markup in percentage" ng-model="mainpopup.markup" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Selling Price(Rs)</span>
+          <input type="number" placeholder="Selling price" ng-model="mainpopup.sellingprice" >
+        </label>
+
+        <!--<label class="item item-input">
+          <span class="input-label">EXP Date: </span>
+          <input type="text" placeholder="EXP date"  readonly="readonly" ng-model="mainpopup.expdate" >
+        </label>-->
+
+            <label class="item item-input">
+          <span class="input-label">EXP Date: </span>
+      
+       <div class="uk-margin">
+        <select id="day" class="uk-select" ng-model="mainpopup.day" disabled="disabled" ng-change="daychange()" class="form-control selectWidth" >
+        
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+  </div>
+      
+  <div class="uk-margin">
+        <select id="month" class="uk-select" ng-model="mainpopup.month" disabled="disabled"  ng-change="monthchange()" class="form-control selectWidth">
+          <option value="JANUARY">JANUARY</option>
+          <option value="FEBRUARY">FEBRUARY</option>
+          <option value="MARCH">MARCH</option>
+          <option value="APRIL">APRIL</option>
+          <option value="MAY">MAY</option>
+          <option value="JUNE">JUNE</option>
+          <option value="JULY">JULY</option>
+          <option value="AUGUST">AUGUST</option>
+          <option value="SEPTEMBER">SEPTEMBER</option>
+          <option value="OCTOBER">OCTOBER</option>
+          <option value="NOVEMBER">NOVEMBER</option>
+          <option value="DECEMBER">DECEMBER</option>
+        </select>
+ </div>
+  <div class="uk-margin">
+        <select id="year" class="uk-select" ng-model="mainpopup.year" disabled="disabled"  ng-options="x for x in years" ng-change="yearchange()" class="form-control selectWidth">
+        </select>
+  </div>
+
+
+</label>
+
+        <label class="item item-input">
+          <span class="input-label">Barcode: </span>
+          <input type="text" placeholder="Scanned barcode value" readonly="readonly"  ng-model="mainpopup.barcodeval" >
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Quantity: </span>
+          <input type="text" placeholder="Item count" ng-model="mainpopup.quantity" >
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Category: </span>
+         <div class="uk-margin">
+          <select id="category"  class="uk-select" readonly="readonly" ng-model="mainpopup.category" ng-change="categorychange()" class="form-control selectWidth">
+          <option value="DRUGS">DRUGS</option>
+          <option value="DISPOSABLES">DISPOSABLES</option>
+          <option value="OTHERS">OTHERS</option>
+        </select>
+        </div>
+        </label>
+        
+          <centre><button class="button button-block button-positive" ng-click="submititem(mainpopup)" type="submit">Done</button></centre>
+     
+     </div>
+     
+  </ion-content>
+</ion-modal-view>

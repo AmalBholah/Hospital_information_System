@@ -1,0 +1,58 @@
+
+<div class="spacer" style="width: 300px; height: 100px;"></div>
+<ion-content ng-app="starter">
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="gototools()" style="border:none;font-size:18px;color:#387ef5;">< Back to menu</button>
+</div>
+<!-- END of Navigator definitions-->
+<div class="spacer" style="width: 300px; height: 80px;"></div>
+    <label class="item item-input item-select">
+    <div class="input-label"style="font-size:18px;">
+      Weight:
+    </div>
+    <label><input type="text" style="font-size:18px;" id ="maintainance.weight" ng-model="maintainance.weight" placeholder="Enter weight"> </label>
+  
+    <select id="maintainance.weightselector">
+      <option selected>kg</option>
+      <option>lb</option>
+      <option>g</option>
+    </select>
+  </label>
+  
+  <div class="spacer" style="width: 300px; height:40px;"></div>
+          <div class="row">
+        <div class="col col-50"></div>
+        <div class="col col-50"><button id="creat.calculate" ng-click="calculatemaintainance()" type="submit" style="font-size:18px;" class="button button-positive">Calculate</button></div>
+        </div>
+        
+<div class="spacer" style="width: 300px; height:20px;"></div>  
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" id="creat.results" class="input-label"></span>
+</label>
+<div class="spacer" style="width: 300px; height:20px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" class="input-label">Type in all fields and tap calculate</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" id="maintainance.bolus" class="input-label"></span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:10px;" id="maintainance.maintain" class="input-label"></span>
+</label>
+<div class="spacer" style="width: 300px; height:10px;"></div>    
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">Calculated using the 4-2-1 Rule:</span>
+</label>
+ 
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">For 0-10 kg: 4 mL/kg/hr</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">For 10-20 kg: +2 mL/kg/hr</span>
+</label>
+<label class="item item-input" style="border: none;">
+<span style="color:black;font-size:18px;margin-left:auto;margin-right:auto;padding-left:20px;" class="input-label">For >20 kg: +1 mL/kg/hr</span>
+</label>
+
+</ion-content>

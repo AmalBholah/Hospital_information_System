@@ -1,0 +1,52 @@
+<ion-content>
+<div class="row">
+  <div class="col">
+    
+   <img id="biodata.profilepic" style="padding-left:10px;padding-top:10px;">
+   
+  </div>
+  <div class="col col-80">
+  <form>
+   <label><input type="text" style="font-size:21px;padding-left:8px;" id ="biodata.fullname" ng-model="biodata.fullname" placeholder="Enter full name"> </label>
+  
+  <div class="spacer" style="width: 300px; height: 20px;"></div>
+   <button ng-click="openDatePicker()" id="biodata.birthday" style="font-size:21px;" class="button button-clear button-positive">{{biodata.birthday}}</button>
+   <div class="spacer" style="width: 300px; height: 10px;"></div>
+   <button style="font-size:21px;" ng-click="selectGender()" id="biodata.gender" class="button button-clear button-positive">{{biodata.gender}}</button>
+  </form>
+  </div>
+</div>
+<form style="padding-left:10px;">
+<div class="spacer" style="width: 300px; height: 20px;"></div>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Occupation: </span>
+          <input type="text" style="font-size:18px;" ng-model="biodata.occupation" id="biodata.occupation" placeholder="Enter occupation" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Address: </span>
+          <input type="text" style="font-size:18px;" ng-model="biodata.address" id="biodata.address" placeholder="Residential address" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">City: </span>
+          <input type="text" style="font-size:18px;" ng-model="biodata.city" id="biodata.city" placeholder="city/rural area" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Home Phone: </span>
+          <input type="text" style="font-size:18px;" ng-model="biodata.homephone" id="biodata.homephone" placeholder="home phone number" >
+        </label>
+        <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Mobile Phone: </span>
+          <input type="text" style="font-size:18px;" ng-model="biodata.mobilephone" id="biodata.mobilephone" placeholder="Mobile phone number" >
+        </label>
+          <label class="item item-input">
+          <span style="color:#387ef5;font-size:18px;" class="input-label">Email: </span>
+          <input type="text" style="font-size:18px;" ng-model="biodata.emailaddress" id="biodata.emailaddress" placeholder="Email address" >
+        </label>
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <div class="row">
+        <div class="col"></div>
+        <div class="col col-80"><button id="biodata.done" ng-click="doneClicked()" style="font-size:21px;" class="button button-clear button-positive">{{biodata.done}}</button></div>
+        </div>
+   </form>
+      </ion-content>
+

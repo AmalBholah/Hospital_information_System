@@ -1,0 +1,36 @@
+<ion-view title="Register Patient" id="registerpatient" style="background-color:#428BCA;">
+    <ion-content padding="true" class="has-header" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);">
+   
+        <div class="spacer" style="width: 748px; height: 70px;"></div>
+        <div id="page-markdown1" style="color:#FFFCFC;font-weight:200;font-size:42px;text-align:center;">
+            <p>Create Account</p>
+            
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+
+<input type="text" style="font-weight:300;margin:auto;display:block;width:300px;font-size:21px;" ng-model="registerpatient.email" placeholder=" Enter a valid email address" ></label>
+
+ <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+<input type="text" style="font-weight:300;margin:auto;display:block;width:300px;font-size:21px;" ng-model="registerpatient.password" placeholder=" Enter a password" ></label>
+
+ <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+         <button id="page-button" ng-click ="assignid()" style="font-weight:300;color:#428BCA;margin:auto;display:block;width:300px;font-size:21px;" type="submit" class="button button-light  button-block">{{registerpatient.nationalid}}</button>
+    
+        <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+        <button id="page-button1" ng-click ="registertofirebase()" style="font-weight:300;color:#428BCA;margin:auto;display:block;width:300px;font-size:21px;" type="submit" class="button button-light  button-block">Click here to register</button>
+   
+   <div class="spacer" style="width: 300px; height: 20px;"></div>
+
+        <button id="page-button1" ng-click ="registertofirebase_nfc()" style="font-weight:300;color:#428BCA;margin:auto;display:block;width:300px;font-size:21px;" type="submit" class="button button-light  button-block">Register using NFC</button>
+   
+     
+      <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <button id="page-button2" ng-click = "switchToPatientLogin()" style="font-weight:300;color:#FFFFFF;margin:auto;display:block;background-color:#428BCA;font-size:21px;" class="button button-light  button-block">Login</button>
+        </ion-content>
+</ion-view>

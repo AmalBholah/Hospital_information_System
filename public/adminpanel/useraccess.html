@@ -1,0 +1,96 @@
+<ion-view title="User Access Management">
+<ion-content padding="true" class="has-header">
+
+<div class="row">
+    <div class="col-60">
+
+        <div class="item item-input-inset">
+            <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleback()">Back</a>
+            <label class="item-input-wrapper">
+                <input type="text" ng-model="searchfilter" placeholder="Search users">
+            </label>
+            <a class="button button-small button-positive" ng-click="createuser()">
+                Create a User
+            </a>
+        </div>
+
+        <div class="list card" >
+
+            <div class="item" ng-repeat="object in objects|filter:searchfilter|limitTo:100" ng-click="userclicked(object)">
+                <div class="row">
+                    <div class="col">
+                        <div class="spacer" style="width: 300px; height: 10px;"></div>
+                        <dt>User : {{object.username}}</dt>
+                        <dd>Card ID : {{object.password}}</dd>
+                    </div>
+
+                    <div class="col">
+                        <button class="uk-button uk-button-primary" style="width:120px;"ng-click="edituser(object)" type="submit"title="Edit User Account" uk-tooltip>Edit</button>
+                        <button class="uk-button uk-button-secondary" style="width:120px;" href="#modal-sections" uk-toggle type="submit"title="Delete User Account" ng-click = "deleteuser(object)"uk-tooltip>Remove</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-sections" uk-modal="center: true">
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title">User Access Management</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <p>WARNING: Deleting this user prevents he/she from accessing this health information system. Do you want to continue?</p>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary uk-modal-close" ng-click="removeuser()" type="button">Remove User</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-40">
+
+        <div class="uk-alert-primary" uk-alert>
+            <p>USER : {{user.useridentification}}</p>
+        </div>
+        <h3 style="margin-left: 10px;">MODULE ACCESS:</h3>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.clinicalmodule"type="checkbox"> Clinical Module</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.patientregistration"type="checkbox"> Patient Registration</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.wardmanager" type="checkbox"> Ward Manager</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.goodsreceivednote"  type="checkbox"> Goods Received Note</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.stockstransfer" type="checkbox"> Stocks Transfer</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.dispenser" type="checkbox"> Dispenser</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.laboratory"  type="checkbox"> Laboratory</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.radiology"  type="checkbox"> Radiology</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.secretary" type="checkbox"> Secretary</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.cashier" type="checkbox"> Cashier</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.accountant" type="checkbox"> Accountant</label>
+        <div class="span" style="height: 20px;"></div>
+        <label><input class="uk-checkbox" style="margin-left: 10px;" ng-model="user.adminpanel" type="checkbox"> Admin Panel</label>
+        <div class="span" style="height: 20px;"></div>
+        <button class="uk-button uk-button-default" ng-click="updateuseraccess()">Update User Access</button>
+
+    </div>
+
+</div>
+
+
+
+
+
+    </ion-content>
+</ion-view>

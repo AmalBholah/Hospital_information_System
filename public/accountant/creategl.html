@@ -1,0 +1,52 @@
+<ion-view>
+<ion-content padding="true" class="has-header">
+
+<a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleBack()">Back</a>
+
+
+<div class="spacer" style="width: 300px; height: 30px;"></div>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Account Category:</span>
+<input type="text" readonly="readonly" style="font-size:18px;" ng-model="creategl.category"  placeholder="Auto-populated based on search below" >
+</label>
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">GL Name: </span>
+<input type="text" readonly="readonly" style="font-size:18px;" ng-model="creategl.glname"  placeholder="Auto-populated based on search below" >
+</label>
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">GL Code: </span>
+<input type="text" readonly="readonly" style="font-size:18px;" ng-model="creategl.glcode"  placeholder="Auto-populated based on search below" >
+</label>
+<div class="spacer" style="width: 300px; height: 15px;"></div>
+<button class="button button-positive button-block" ng-click="searchaccounts()">Search for a GL Account</button>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Item Description:</span>
+<input type="text" style="font-size:18px;" ng-model="creategl.itemdescription"  placeholder="GL Entry Details" >
+</label>
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Total Amount: </span>
+<input type="number" style="font-size:18px;" ng-model="creategl.totalamount"  placeholder="Enter total amount to be paid" >
+</label>
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Amount Paid: </span>
+<input type="number" style="font-size:18px;" ng-model="creategl.amountpaid"  placeholder="Amount actually paid" >
+</label>
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">Amount due: </span>
+<input type="number" readonly="readonly" style="font-size:18px;" ng-model="creategl.amountdue"  placeholder="Amount left to be paid (auto calculated)" >
+</label>
+
+<label class="item item-input">
+<span style="color:#387ef5;font-size:18px;" class="input-label">GL Status: </span>
+<select id="item" ng-model="creategl.item" ng-change="itemchange()" ng-options="x for x in items" class="form-control selectWidth">
+</select>
+</label>
+
+<div class="spacer" style="width: 300px; height: 15px;"></div>
+<button class="button button-balanced button-block" ng-click="saveglentry(creategl)">Save GL Entry</button>
+
+
+</ion-content>
+</ion-view>

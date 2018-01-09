@@ -1,0 +1,32 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 150px; min-width: 0; max-width: 600px;"
+>
+  <ion-header-bar>
+    <h1 class="title">Fill in all fields</h1>
+
+  </ion-header-bar>
+  <ion-content>
+
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Supplier Name :</span>
+          <input type="text" placeholder="Supplier Name" ng-model="mainpopup.suppliername" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">BRN: </span>
+          <input type="text" placeholder="Supplier BRN" ng-model="mainpopup.supplierbrn" >
+        </label>
+        <label class="item item-input">
+          <span class="input-label">GL CODE: </span>
+          <input type="text" placeholder="Supplier GL Code" ng-model="mainpopup.supplierglaccount" >
+        </label>
+
+        <centre><button class="button button-block button-positive" ng-click="submititem(mainpopup)" type="submit">Done</button></centre>
+     </div>
+
+  </ion-content>
+</ion-modal-view>

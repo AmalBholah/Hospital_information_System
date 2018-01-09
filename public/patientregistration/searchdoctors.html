@@ -1,0 +1,31 @@
+<ion-view>
+<ion-content padding="true" class="has-header">
+
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleBack()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="searchfilter" placeholder="Search doctors list">
+    </label>
+    <button class="button button-small button-positive" ng-click="refreshlist()">
+      Refresh
+    </button>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="doctor in doctors|filter:searchfilter| limitTo:100" ng-click="showDetails(doctor)">
+<!--
+  <h2>Surname: {{doctor.surname}}</h2>
+  <h2>Name: {{doctor.givenname}}</h2>
+  <p>Doctor ID: {{doctor.did}}</p>-->
+
+  <h2>Name: {{doctor.servicetype}}</h2>
+  <p>Doctor ID: {{doctor.glcode}}</p>
+
+
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>

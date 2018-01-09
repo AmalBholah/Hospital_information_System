@@ -1,0 +1,188 @@
+/* Empty. Add your own CSS if you like */
+.diagnosis .tags {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.diagnosis .tags.focused {
+  border-color: #66afe9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+
+.diagnosis .tags .tag-item {
+  background: #428bca;
+  border: 1px solid #428bca;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.diagnosis .tags .tag-item.selected {
+  background: #FF6861;
+  border: 1px solid #FF6861;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.diagnosis .tags .tag-item button {
+  background: transparent;
+  color: #000;
+  opacity: .4;
+}
+
+.diagnosis .autocomplete {
+  border-radius: 4px;
+}
+
+.diagnosis .autocomplete .suggestion-item.selected {
+  color: #262626;
+  background-color: #e9e9e9;
+}
+
+.diagnosis .autocomplete .suggestion-item em {
+  font-weight: normal;
+  background-color: #ffff00;
+}
+
+.diagnosis .autocomplete .suggestion-item.selected em {
+  color: #262626;
+  background-color: #ffff00;
+}
+
+/* Empty. Add your own CSS if you like */
+.treatment .tags {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.treatment .tags.focused {
+  border-color: #66afe9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+}
+
+.treatment .tags .tag-item {
+  background: #d9534f;
+  border: 1px solid #d9534f;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.treatment .tags .tag-item.selected {
+  background: #d9534f;
+  border: 1px solid #d43f3a;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.treatment .tags .tag-item button {
+  background: transparent;
+  color: #000;
+  opacity: .4;
+}
+
+.treatment .autocomplete {
+  border-radius: 4px;
+}
+
+.treatment .autocomplete .suggestion-item.selected {
+  color: #262626;
+  background-color: #e9e9e9;
+}
+
+.treatment .autocomplete .suggestion-item em {
+  font-weight: normal;
+  background-color: #ffff00;
+}
+
+.treatment .autocomplete .suggestion-item.selected em {
+  color: #262626;
+  background-color: #ffff00;
+}
+
+/* List of items */
+#tags-diagnosis li { list-style-type: none; height: 36px; padding: 0px 5px; border-bottom: 0px solid #dadada;  }
+#tags-treatment li { list-style-type: none; height: 36px; padding: 0px 5px; border-bottom: 0px solid #dadada;  }
+#tags-appt li { list-style-type: none; height: 60px; padding: 0px 5px; border-bottom: 0px solid #dadada;  }
+#list-cards div { list-style-type: none; height: 250px; padding: 0px 5px; border-bottom: 0px solid #dadada;  }
+.item-complete { float: left; margin: 0 8px 0 15px; height: 100%; }
+.item-diagnosis-delete { float: right; margin: 5px; margin-right: 15px; height: 26px; }
+.item-treatment-delete { float: right; margin: 5px; margin-right: 15px; height: 26px; }
+.diagnosis{  background: #428bca;
+  border: 1px solid #428bca;
+  border-radius: 4px;
+  color: #fff;
+  margin: 2px;
+  padding: 0 5px;
+  display: inline-block;
+  float: left;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 26px;
+  line-height: 25px;
+  
+  }
+  .treatment{  
+  background: #d9534f;
+  border: 1px solid #d9534f;
+  border-radius: 4px;
+  color: #fff;
+  margin: 2px;
+  padding: 0 5px;
+  display: inline-block;
+  float: left;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 26px;
+  line-height: 25px;
+  
+  }
+
+  /*-------------------------
+	The Login Form
+--------------------------*/
+
+
+#login-register{
+	background-color:#428bca;
+	padding: 65px 75px;
+	width:660px;
+	height:400px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-235px 0 0 -325px;
+
+	box-shadow:0 2px 5px rgba(0,0,0,0);
+}
+
+#login-register h1{
+	font-size:36px;
+}
+
+#login-register h{
+	font-size:36px;
+}
+
+#login-register h4{
+	font-size:20px;
+}
+#login-register input{
+	font: inherit;
+	font-size: 18px;
+	line-height: 30px;
+	background-color: #fff;
+	color: #444;
+	padding: 10px 10px;
+	border: none;
+	display: block;
+	width: 450px;
+	margin: 20px 0 15px;
+	outline: none;
+}
+
+#login-register p{
+	line-height:1.4;
+}

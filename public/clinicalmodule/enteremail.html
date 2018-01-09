@@ -1,0 +1,27 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 0; max-height: 200px;min-width: 0; max-width: 600px;"
+>
+  <ion-header-bar>
+    <h1 class="title">Patient password recovery</h1>
+
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doRecovery()">
+      <div class="list">
+
+        <label class="item item-input">
+          <span class="input-label">Enter valid email used to create this account</span>
+          <input type="text" ng-model="recovery.email" >
+        </label>
+
+        <label class="item">
+          <button class="button button-block button-positive" style="background-color:#428BCA;" type="submit">Submit</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,5 @@
+---
+applications:
+- name:    smarthealth-smh
+  host:    smarthealth-smh
+  memory:  128M

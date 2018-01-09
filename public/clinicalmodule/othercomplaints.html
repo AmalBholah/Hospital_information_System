@@ -1,0 +1,126 @@
+<ion-content>
+
+<!--BEGIN PATIENT othercomplaints TEMPLATE-->
+<!-- Navigator definitions-->
+<div class="bar bar-header" style="border:none;">
+<button class="button" ng-click="back()" style="border:none;font-size:18px;color:#387ef5;">< Previous sheet</button>
+<button class="button" ng-click="menu()" style="border:none;font-size:18px;color:#FF8800;">Options</button>
+<button class="button" ng-click="next()" style="border:none;font-size:18px;color:#387ef5;">Next sheet ></button>
+</div>
+<!-- END of Navigator definitions-->
+<!--List encompasses all items-->
+<div class="list">
+<div class="spacer" style="width: 300px; height: 40px;"></div>
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:40px;" class="input-label">DRUG HISTORY</span>
+</label>
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<input type="text" style="font-size:18px;height:41px;padding-left:10px;width:100%;" id="othercomplaints.drughistory" ng-model="othercomplaints.drughistory" placeholder="Drug history" >
+</div><!--END of Text + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Drug allergies</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    id="othercomplaints.allergycheck"
+                    ng-model="othercomplaints.allergycheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.allergytext" ng-model="othercomplaints.allergytext" placeholder="Drug allergies" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">1.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.drugone"  ng-model="othercomplaints.drugone" placeholder="Medications in use" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">2.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.drugtwo"  ng-model="othercomplaints.drugtwo" placeholder="Medications in use" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<!---------Text + placeholder no text area-------->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">3.</div>
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-left:35px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.drugthree" ng-model="othercomplaints.drugthree" placeholder="Medications in use" ></label>
+</div><!--END of Text + placeholder no text area-->
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:35px;" class="input-label">FAMILY HISTORY</span>
+</label>
+
+<input type="text" style="font-size:18px;height:41px;padding-left:10px;width:100%;" id="othercomplaints.familyhistory" ng-model="othercomplaints.familyhistory" placeholder="Family history" >
+
+<label class="item item-input" style="border: none;">
+<span style="color:#387ef5;font-size:18px;margin-left:auto;margin-right:auto;padding-left:35px;" class="input-label">SOCIAL HISTORY</span>
+</label>
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Smoking</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="othercomplaints.smokingcheck"
+                    id="othercomplaints.smokingcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.smokingtext" ng-model="othercomplaints.smokingtext" placeholder="Smoking" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Alcohol</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="othercomplaints.alcoholcheck"
+                    id="othercomplaints.alcoholcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.alcoholtext"  ng-model="othercomplaints.alcoholtext" placeholder="Alcohol" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Drug abuse</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="othercomplaints.drugabusecheck"
+                    id="othercomplaints.drugabusecheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.drugabusetext"  ng-model="othercomplaints.drugabusetext" placeholder="Drug abuse" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Travel history</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="othercomplaints.travelcheck"
+                    id="othercomplaints.travelcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.traveltext"  ng-model="othercomplaints.traveltext" placeholder="Travel history" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--Toggle button-positive + placeholder no text area-->
+<div class="item item-input-inset" style="border: none;height:50px;">
+<div style="color:#387ef5;font-size:18px;min-width:120px;" class="text-label">Sexual history</div>
+<ion-toggle toggle-class="toggle-positive" style="border: none;color:#387ef5;font-size:18px;height:54px;min-width:30px;"
+                    ng-model="othercomplaints.sexualcheck"
+                    id="othercomplaints.sexualcheck"
+                    ng-true-value="'true'"
+                    ng-false-value="'false'"></ion-toggle>
+
+<label class="item item-input" style="border: none;"><input type="text" style="font-size:18px;padding-top:4px;height:41px;width:5000px;" id="othercomplaints.sexualtext" ng-model="othercomplaints.sexualtext" placeholder="Sexual history" ></label>
+</div><!--END of Toggle button-positive + placeholder no text area-->
+
+<!--List encompasses all items-->
+
+</div><!--END of list div-->
+</ion-content>

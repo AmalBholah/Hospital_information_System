@@ -1,0 +1,49 @@
+<ion-view title="Supplier Manager">
+<ion-content padding="true" class="has-header">
+
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleback()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="searchfilter" placeholder="Search suppliers">
+    </label>
+    <a class="button button-small button-positive" ng-click="createsupplier()">
+      Create a Supplier
+    </a>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="supplier in suppliers|filter:searchfilter|limitTo:200" ng-click="supplierclicked(supplier)">
+<div class="row">
+  <div class="col">
+  <div class="spacer" style="width: 300px; height: 10px;"></div>
+  <dt>Supplier Name : {{supplier.suppliername}}</dt>
+  <dd>BRN : {{supplier.supplierbrn}}</dd>
+  <dd>GL CODE : {{supplier.supplierglaccount}}</dd>
+  </div>
+
+<div class="col">
+<button class="uk-button uk-button-primary" style="width:120px;"ng-click="editsupplier(supplier)" type="submit"title="Edit Supplier " uk-tooltip>Edit</button>
+<button class="uk-button uk-button-secondary" style="width:120px;" href="#modal-sections" uk-toggle type="submit"title="Delete Supplier" ng-click = "deletesupplier(supplier)"uk-tooltip>Remove</button>
+</div>
+
+</div>
+</div>
+
+<div id="modal-sections" uk-modal="center: true">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Supplier Management</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>WARNING: Deleting this Supplier is irreversible. Do you want to continue?</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary uk-modal-close" ng-click="removesupplier()" type="button">Remove Supplier</button>
+        </div>
+    </div>
+
+    </ion-content>
+</ion-view>

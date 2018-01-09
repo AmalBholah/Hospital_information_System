@@ -1,0 +1,23 @@
+<ion-modal-view
+
+style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);min-height: 400px; min-width: 0; max-width: 600px;"
+>
+  <ion-header-bar>
+    <h1 class="title">Choose the provider of the CREDIT CARD</h1>
+  </ion-header-bar>
+  <ion-content>
+      
+<div class="item" ng-repeat="object in objects|limitTo:100" ng-click="bankaccountclicked(object)">
+
+  <div class="spacer" style="width: 300px; height: 10px;"></div>
+
+ <dt>{{object.bankname}}</dt>
+
+
+
+     
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,30 @@
+<ion-view title="System Parameters">
+<ion-content padding="true" class="has-header">
+
+<div class="item item-input-inset">
+  <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="handleback()">Back</a>
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="searchfilter" placeholder="Search parameters">
+    </label>
+  </div>
+
+<div class="list card" >
+
+<div class="item" ng-repeat="object in objects|filter:searchfilter|limitTo:200">
+<div class="row">
+  <div class="col">
+  <div class="spacer" style="width: 300px; height: 10px;"></div>
+  <dt>{{object.parameter}}</dt>
+  <dd>Value : {{object.value}}</dd>
+  </div>
+
+<div class="col">
+<button class="uk-button uk-button-primary" style="width:120px;"ng-click="editparameter(object)" type="submit"title="Edit Parameter " uk-tooltip>Edit</button>
+</div>
+
+</div>
+</div>
+
+
+    </ion-content>
+</ion-view>
