@@ -1,6 +1,5 @@
-[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/EcXIATK3r4s)
 
-
+Video Demonstration of Hospital Information System on Link Below.
 
 https://youtu.be/EcXIATK3r4s
 
