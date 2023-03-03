@@ -1,8 +1,4 @@
-   <iframe width="560" height="315" 
-src="https://youtu.be/EcXIATK3r4s"  
-frameborder="0"  
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  
-allowfullscreen></iframe> 
+[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/EcXIATK3r4s)
 
 
 
