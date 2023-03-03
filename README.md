@@ -1,3 +1,5 @@
+<video src="https://youtu.be/EcXIATK3r4s"></video>
+
 Install the necessary software dependencies: This includes installing Node.js and NPM on your server to manage the front-end dependencies.
 
 Clone the repository: Once you have the necessary dependencies installed, you'll need to clone the project repository from GitHub onto your server.
