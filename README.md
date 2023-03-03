@@ -1,4 +1,4 @@
-<video src="https://youtu.be/EcXIATK3r4s"></video>
+https://youtu.be/EcXIATK3r4s
 
 Install the necessary software dependencies: This includes installing Node.js and NPM on your server to manage the front-end dependencies.
 
